@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Generator_pytan
 {
-    public partial class Form1 : Form
+    public partial class Panel_wyboru : Form
     {
-        public Form1()
+        public Panel_wyboru()
         {
             InitializeComponent();
         }
@@ -20,6 +20,21 @@ namespace Generator_pytan
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Question Pytanie1 = new Question("Tresc pyt1", 1);
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Logowanie Logowanie = new Logowanie();
+            Logowanie.Show();
+            
         }
     }
 }

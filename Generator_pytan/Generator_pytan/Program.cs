@@ -16,7 +16,8 @@ namespace Generator_pytan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Panel_wyboru());
+            Logowanie Logowanie = new Logowanie();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Generator_pytan
         public Question(String content, int points) {//publiczny czyli jest widoczny dla innych klas, konstruktor umozliwia stworzenie obiektu klasy Question
             this.content = content; // przypisuje parametr content (okreslony  w konstruktorze ) do atrybutu klasy content 
             this.points = points; // przypisuje parametr points (okreslony  w konstruktorze ) do atrybutu klasy points
-            answers = new List<Answer>();  //inicjalizacja listy 
+            this.answers = new List<Answer>();  //inicjalizacja listy 
 
         }
 

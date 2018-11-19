@@ -10,7 +10,7 @@ namespace Generator_pytan
     { // atrybuty klasy
         String content;// zmienna tresc odpowiedzi 
         bool correctness;// zmienna boolowska prawda fałsza 
-        Answer(String content, bool correctness) {//konstruktor umozliwia stworzenie obiektu klasy Answer
+        public Answer(String content, bool correctness) {//konstruktor umozliwia stworzenie obiektu klasy Answer
             
             this.content = content;// przypisuje parametr content (okreslony  w konstruktorze ) do atrybutu klasy content 
             this.correctness = correctness;// przypisuje parametr correctness (okreslony  w konstruktorze ) do atrybutu klasy correctness
