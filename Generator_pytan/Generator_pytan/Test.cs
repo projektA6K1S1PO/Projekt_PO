@@ -21,5 +21,10 @@ namespace Generator_pytan
         {
            
         }
+
+        private void Test_Load(object sender, EventArgs e)
+        {
+            label1.Text = Panel_adminstratora.filePath;
+        }
     }
 }

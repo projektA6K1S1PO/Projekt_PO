@@ -15,7 +15,7 @@ namespace Generator_pytan
     {
 
         //Zmienne Globalne
-        public static string filePath = " ";
+        public static string filePath = null;
 
 
         public Panel_adminstratora()
@@ -25,8 +25,8 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-
+            
+     
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 filePath = openFileDialog1.FileName;
@@ -38,6 +38,13 @@ namespace Generator_pytan
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Panel_wyboru Panel_wyboru = new Panel_wyboru();
+            Panel_wyboru.Show();
         }
     }
 }

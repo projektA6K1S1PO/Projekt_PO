@@ -46,8 +46,8 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Plik txt (*.txt)|*.txt|All files (*.*)|*.*";
-            this.openFileDialog1.FilterIndex = 2;
+            this.openFileDialog1.Filter = "Plik txt (*.txt)|*.txt|All files (*.*)|*.*|Plik CSV (*.csv)|*.csv";
+            this.openFileDialog1.FilterIndex = 3;
             this.openFileDialog1.InitialDirectory = "c:\\\\";
             this.openFileDialog1.RestoreDirectory = true;
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
@@ -60,6 +60,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Przejdz do panelu głównego";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Panel_adminstratora
             // 

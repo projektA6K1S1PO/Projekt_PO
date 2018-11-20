@@ -28,7 +28,12 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Question Pytanie1 = new Question("Tresc pyt1", 1);
+            if (!(Panel_adminstratora.filePath == null))
+            {
+                this.Hide();
+                Test Test = new Test();
+                Test.Show();
+            }
 
 
         }
