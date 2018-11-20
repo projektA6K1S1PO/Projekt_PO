@@ -24,7 +24,7 @@ namespace Generator_pytan
 
         private void Test_Load(object sender, EventArgs e)
         {
-            label1.Text = Panel_adminstratora.filePath;
+            label1.Text = Panel_adminstratora.filePath;//Szybkie wyswietlenie sciezki do pliku
         }
     }
 }

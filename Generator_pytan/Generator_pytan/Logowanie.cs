@@ -19,7 +19,7 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (login_box.Text == Properties.Settings.Default.Login &&  haslo_box.Text == Properties.Settings.Default.Haslo)
+            if (login_box.Text == Properties.Settings.Default.Login &&  haslo_box.Text == Properties.Settings.Default.Haslo)//Sprawdzenie hasla i loginu
             {
                 this.Hide();//Zamknij forme Logowanie
                 Panel_adminstratora Panel_adminstratora = new Panel_adminstratora();

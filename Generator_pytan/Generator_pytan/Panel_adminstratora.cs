@@ -14,8 +14,8 @@ namespace Generator_pytan
     public partial class Panel_adminstratora : Form
     {
 
-        //Zmienne Globalne
-        public static string filePath = null;
+        
+        public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
 
 
         public Panel_adminstratora()
@@ -27,10 +27,10 @@ namespace Generator_pytan
         {
             
      
-            if(openFileDialog1.ShowDialog()==DialogResult.OK)
+            if(openFileDialog1.ShowDialog()==DialogResult.OK)//Prawidlowo otwarty plik
             {
-                filePath = openFileDialog1.FileName;
-               
+                filePath = openFileDialog1.FileName;//Wyłuskanie sciezki do pliku z pytaniami
+          
             }
 
         }

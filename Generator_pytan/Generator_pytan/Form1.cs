@@ -13,9 +13,6 @@ namespace Generator_pytan
     public partial class Panel_wyboru : Form
     {
 
-     
-
-       
         public Panel_wyboru()
         {
             InitializeComponent();
@@ -28,11 +25,16 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!(Panel_adminstratora.filePath == null))
+            if (!(Panel_adminstratora.filePath == null))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
             {
-                this.Hide();
+                this.Hide();//Zamknij forme wybor
                 Test Test = new Test();
-                Test.Show();
+                Test.Show();//Otworz forme test
+            }
+            else
+            {
+
+                MessageBox.Show("Administrator nie wczytał zestawu pytań", "Błąd Pliku", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -40,9 +42,9 @@ namespace Generator_pytan
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();//Zamknij forme wybor
             Logowanie Logowanie = new Logowanie();
-            Logowanie.Show();
+            Logowanie.Show();//Otworz forme logowanie
             
         }
     }

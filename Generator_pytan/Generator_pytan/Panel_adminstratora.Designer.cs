@@ -70,6 +70,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Panel_adminstratora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panel_adminstratora";
             this.ResumeLayout(false);
 
