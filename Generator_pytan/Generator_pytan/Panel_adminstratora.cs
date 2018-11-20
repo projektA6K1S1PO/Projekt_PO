@@ -8,10 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Generator_pytan
 {
     public partial class Panel_adminstratora : Form
     {
+
+        //Zmienne Globalne
+        public static string filePath = " ";
+
+
         public Panel_adminstratora()
         {
             InitializeComponent();
@@ -23,11 +29,10 @@ namespace Generator_pytan
 
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
-
                 filePath = openFileDialog1.FileName;
+               
             }
 
-            
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)

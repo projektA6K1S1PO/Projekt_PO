@@ -12,6 +12,10 @@ namespace Generator_pytan
 {
     public partial class Panel_wyboru : Form
     {
+
+     
+
+       
         public Panel_wyboru()
         {
             InitializeComponent();
@@ -19,7 +23,7 @@ namespace Generator_pytan
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         private void button1_Click(object sender, EventArgs e)

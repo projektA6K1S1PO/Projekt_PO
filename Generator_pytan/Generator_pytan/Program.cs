@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Generator_pytan
 {
     static class Program
@@ -17,7 +18,10 @@ namespace Generator_pytan
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Panel_wyboru());
-            Logowanie Logowanie = new Logowanie();
+
+
+          
+            
         }
     }
 }
