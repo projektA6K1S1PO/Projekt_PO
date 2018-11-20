@@ -16,5 +16,23 @@ namespace Generator_pytan
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+
+            if(openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+
+                filePath = openFileDialog1.FileName;
+            }
+
+            
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            
+        }
     }
 }

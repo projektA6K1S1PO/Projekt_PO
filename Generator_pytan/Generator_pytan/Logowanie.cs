@@ -19,7 +19,17 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Properties.Settings.Default.
+            if (login_box.Text == Properties.Settings.Default.Login &&  haslo_box.Text == Properties.Settings.Default.Haslo)
+            {
+                this.Hide();//Zamknij forme Logowanie
+                Panel_adminstratora Panel_adminstratora = new Panel_adminstratora();
+                Panel_adminstratora.Show();//Otworz panel administratora
+            }
+            else
+            {
+                MessageBox.Show("Zły login lub hasło", "Błędne dane logowania",MessageBoxButtons.OK,MessageBoxIcon.Warning);//MsgBox zle dane logowania
+            }
+          
         }
     }
 }
