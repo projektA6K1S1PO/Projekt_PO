@@ -14,12 +14,8 @@ namespace Generator_pytan
 {
     public partial class Panel_adminstratora : Form
     {
-
-        
+  
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
-        
-
-
 
         public Panel_adminstratora()
         {
@@ -36,22 +32,18 @@ namespace Generator_pytan
           
             }
 
-            // Get the data.
+            // Pobierz danę z pliku do tablicy
             Test.baza_pytan_array = LoadCsv(filePath);
-            label2.Text = Test.baza_pytan_array[0, 0];
+            label2.Text = Test.baza_pytan_array[0, 0];//Wyświetl nazwę zestawu dla użytkownika
 
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-            
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Hide();//Powróc do panelu głównego
             Panel_wyboru Panel_wyboru = new Panel_wyboru();
-            Panel_wyboru.Show();
+            Panel_wyboru.Show();//Otwórz panel wyboru
         }
 
       

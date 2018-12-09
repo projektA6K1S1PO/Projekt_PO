@@ -25,23 +25,17 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if (!(Panel_adminstratora.filePath == null))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
-            //{
-            //    this.Hide();//Zamknij forme wybor
-            //    Test Test = new Test();
-            //    Test.Show();//Otworz forme test
-            //}
-            //else
-            //{
+            if (!(Panel_adminstratora.filePath == null))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
+            {
+                this.Hide();//Zamknij forme wybor
+                Test Test = new Test();
+                Test.Show();//Otworz forme test
+            }
+            else
+            {
 
-            //    MessageBox.Show("Administrator nie wczytał zestawu pytań", "Błąd Pliku", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-
-            this.Hide();//Zamknij forme wybor
-            Test Test = new Test();
-            Test.Show();//Otworz forme test
-
-
+                MessageBox.Show("Administrator nie wczytał zestawu pytań", "Błąd Pliku", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
