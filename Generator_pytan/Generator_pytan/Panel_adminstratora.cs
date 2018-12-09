@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 
 namespace Generator_pytan
@@ -16,6 +17,7 @@ namespace Generator_pytan
 
         
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
+
 
 
         public Panel_adminstratora()
@@ -33,6 +35,11 @@ namespace Generator_pytan
           
             }
 
+            // Get the data.
+            string[,] values = LoadCsv(filePath);
+            int num_rows = values.GetUpperBound(0) + 1;
+            int num_cols = values.GetUpperBound(1) + 1;
+
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -45,6 +52,40 @@ namespace Generator_pytan
             this.Hide();
             Panel_wyboru Panel_wyboru = new Panel_wyboru();
             Panel_wyboru.Show();
+        }
+
+      
+        // Załaduj plik CSV do tablicy
+
+        private string[,] LoadCsv(string filename)
+        {
+            // Wyłuskaj cały tekst z pliku
+            string whole_file = File.ReadAllText(filename);
+
+            // Podziel na linię
+            whole_file = whole_file.Replace('\n', '\r');
+            string[] lines = whole_file.Split(new char[] { '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
+
+            // Zbadaj ile kolumn oraz wierszy jest w pliku
+            int num_rows = lines.Length;
+            int num_cols = lines[0].Split(';').Length;
+
+            // Utwórz nową tablicę o wymaganych wymiarach
+            string[,] values = new string[num_rows, num_cols];
+
+            // Załaduj danymi
+            for (int r = 0; r < num_rows; r++)
+            {
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < num_cols; c++)
+                {
+                    values[r, c] = line_r[c];
+                }
+            }
+
+            // Zwróc tablicę w wyniku
+            return values;
         }
     }
 }

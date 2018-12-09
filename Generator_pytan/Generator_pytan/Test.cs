@@ -26,5 +26,10 @@ namespace Generator_pytan
         {
             label1.Text = Panel_adminstratora.filePath;//Szybkie wyswietlenie sciezki do pliku
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
