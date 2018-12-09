@@ -14,8 +14,9 @@ namespace Generator_pytan
     {
 
         public static int numer_pytania=0;//Zmienna lokalna,testowa numer aktualnie 
-        public static int wynik = 0;
         //wyświetlanego pytania (numer bezwzględny nawet przy losowych pytaniach
+        public static int wynik = 0;//Zmienna przechowująca wynik testu
+        
         
 
         public Test()
@@ -31,8 +32,8 @@ namespace Generator_pytan
         private void Test_Load(object sender, EventArgs e)
         {
             label1.Text = Question.baza_pytan_array[0,0];//Pokaż nazwę zestawu
-            generuj_obiekty_pytan();
-            napelnij_danymi_obiekty();
+            generuj_obiekty_pytan();//Generuj obiekty klasy Question
+            napelnij_danymi_obiekty();//Napełnij danymi obiekty
         }
 
 
@@ -63,7 +64,7 @@ namespace Generator_pytan
             check_odp_3.Text =          Question.listaPytan[numer_pytania].odp_3;
             check_odp_4.Text =          Question.listaPytan[numer_pytania].odp_4;
             check_odp_5.Text =          Question.listaPytan[numer_pytania].odp_5;
-            lab_wynik.Text = Convert.ToString(wynik);
+            lab_wynik.Text = Convert.ToString(wynik);//Pokaż wynik dla testu (ukryte na form)
             
         }
 
@@ -99,10 +100,10 @@ namespace Generator_pytan
 
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
-            sprawdz_odp();
-            zeruj_odp();
-            numer_pytania++;
-            if (numer_pytania > 19)
+            sprawdz_odp();//Sprawdz poprawność odp dodaj punkty do wyniku
+            zeruj_odp();//Zeruj zaznaczenia checkboxów
+            numer_pytania++;//Przejdz do następnego pytania
+            if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
                 MessageBox.Show("Koniec Testu \nTwój wynik to:"+wynik+" Punktów");
             }
@@ -114,6 +115,7 @@ namespace Generator_pytan
             
         }
 
+        //Funkcja sprawdzająca odp na pytania
         private void sprawdz_odp()
         {
             if (check_odp_1.Checked)
@@ -138,6 +140,7 @@ namespace Generator_pytan
             }
 
         }
+        //Funkcja zerująca zaznaczenia chceckboxów
         private void zeruj_odp()
         {
             check_odp_1.Checked = false;
