@@ -32,16 +32,16 @@
             this.but_start_test = new System.Windows.Forms.Button();
             this.but_stop_test = new System.Windows.Forms.Button();
             this.panel_pytan = new System.Windows.Forms.Panel();
+            this.lab_numer_pytania = new System.Windows.Forms.Label();
+            this.check_odp_5 = new System.Windows.Forms.CheckBox();
+            this.check_odp_4 = new System.Windows.Forms.CheckBox();
+            this.check_odp_3 = new System.Windows.Forms.CheckBox();
+            this.check_odp_2 = new System.Windows.Forms.CheckBox();
+            this.check_odp_1 = new System.Windows.Forms.CheckBox();
+            this.lab_tresc_pytania = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lab_tresc_pytania = new System.Windows.Forms.Label();
-            this.check_odp_1 = new System.Windows.Forms.CheckBox();
-            this.check_odp_2 = new System.Windows.Forms.CheckBox();
-            this.check_odp_3 = new System.Windows.Forms.CheckBox();
-            this.check_odp_4 = new System.Windows.Forms.CheckBox();
-            this.check_odp_5 = new System.Windows.Forms.CheckBox();
             this.but_nastepne_pyt = new System.Windows.Forms.Button();
-            this.lab_numer_pytania = new System.Windows.Forms.Label();
             this.panel_pytan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +90,71 @@
             this.panel_pytan.TabIndex = 4;
             this.panel_pytan.Visible = false;
             // 
+            // lab_numer_pytania
+            // 
+            this.lab_numer_pytania.AutoSize = true;
+            this.lab_numer_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lab_numer_pytania.Location = new System.Drawing.Point(524, 10);
+            this.lab_numer_pytania.Name = "lab_numer_pytania";
+            this.lab_numer_pytania.Size = new System.Drawing.Size(87, 29);
+            this.lab_numer_pytania.TabIndex = 8;
+            this.lab_numer_pytania.Text = "label4";
+            // 
+            // check_odp_5
+            // 
+            this.check_odp_5.AutoSize = true;
+            this.check_odp_5.Location = new System.Drawing.Point(43, 350);
+            this.check_odp_5.Name = "check_odp_5";
+            this.check_odp_5.Size = new System.Drawing.Size(18, 17);
+            this.check_odp_5.TabIndex = 6;
+            this.check_odp_5.UseVisualStyleBackColor = true;
+            // 
+            // check_odp_4
+            // 
+            this.check_odp_4.AutoSize = true;
+            this.check_odp_4.Location = new System.Drawing.Point(41, 282);
+            this.check_odp_4.Name = "check_odp_4";
+            this.check_odp_4.Size = new System.Drawing.Size(18, 17);
+            this.check_odp_4.TabIndex = 5;
+            this.check_odp_4.UseVisualStyleBackColor = true;
+            // 
+            // check_odp_3
+            // 
+            this.check_odp_3.AutoSize = true;
+            this.check_odp_3.Location = new System.Drawing.Point(41, 211);
+            this.check_odp_3.Name = "check_odp_3";
+            this.check_odp_3.Size = new System.Drawing.Size(18, 17);
+            this.check_odp_3.TabIndex = 4;
+            this.check_odp_3.UseVisualStyleBackColor = true;
+            // 
+            // check_odp_2
+            // 
+            this.check_odp_2.AutoSize = true;
+            this.check_odp_2.Location = new System.Drawing.Point(41, 143);
+            this.check_odp_2.Name = "check_odp_2";
+            this.check_odp_2.Size = new System.Drawing.Size(18, 17);
+            this.check_odp_2.TabIndex = 3;
+            this.check_odp_2.UseVisualStyleBackColor = true;
+            // 
+            // check_odp_1
+            // 
+            this.check_odp_1.AutoSize = true;
+            this.check_odp_1.Location = new System.Drawing.Point(41, 77);
+            this.check_odp_1.Name = "check_odp_1";
+            this.check_odp_1.Size = new System.Drawing.Size(18, 17);
+            this.check_odp_1.TabIndex = 2;
+            this.check_odp_1.UseVisualStyleBackColor = true;
+            // 
+            // lab_tresc_pytania
+            // 
+            this.lab_tresc_pytania.AutoSize = true;
+            this.lab_tresc_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lab_tresc_pytania.Location = new System.Drawing.Point(75, 21);
+            this.lab_tresc_pytania.Name = "lab_tresc_pytania";
+            this.lab_tresc_pytania.Size = new System.Drawing.Size(87, 29);
+            this.lab_tresc_pytania.TabIndex = 1;
+            this.lab_tresc_pytania.Text = "label4";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -108,61 +173,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Rozwiązujesz zestaw: ";
             // 
-            // lab_tresc_pytania
-            // 
-            this.lab_tresc_pytania.AutoSize = true;
-            this.lab_tresc_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lab_tresc_pytania.Location = new System.Drawing.Point(75, 21);
-            this.lab_tresc_pytania.Name = "lab_tresc_pytania";
-            this.lab_tresc_pytania.Size = new System.Drawing.Size(87, 29);
-            this.lab_tresc_pytania.TabIndex = 1;
-            this.lab_tresc_pytania.Text = "label4";
-            // 
-            // check_odp_1
-            // 
-            this.check_odp_1.AutoSize = true;
-            this.check_odp_1.Location = new System.Drawing.Point(41, 77);
-            this.check_odp_1.Name = "check_odp_1";
-            this.check_odp_1.Size = new System.Drawing.Size(18, 17);
-            this.check_odp_1.TabIndex = 2;
-            this.check_odp_1.UseVisualStyleBackColor = true;
-            // 
-            // check_odp_2
-            // 
-            this.check_odp_2.AutoSize = true;
-            this.check_odp_2.Location = new System.Drawing.Point(41, 143);
-            this.check_odp_2.Name = "check_odp_2";
-            this.check_odp_2.Size = new System.Drawing.Size(18, 17);
-            this.check_odp_2.TabIndex = 3;
-            this.check_odp_2.UseVisualStyleBackColor = true;
-            // 
-            // check_odp_3
-            // 
-            this.check_odp_3.AutoSize = true;
-            this.check_odp_3.Location = new System.Drawing.Point(41, 211);
-            this.check_odp_3.Name = "check_odp_3";
-            this.check_odp_3.Size = new System.Drawing.Size(18, 17);
-            this.check_odp_3.TabIndex = 4;
-            this.check_odp_3.UseVisualStyleBackColor = true;
-            // 
-            // check_odp_4
-            // 
-            this.check_odp_4.AutoSize = true;
-            this.check_odp_4.Location = new System.Drawing.Point(41, 282);
-            this.check_odp_4.Name = "check_odp_4";
-            this.check_odp_4.Size = new System.Drawing.Size(18, 17);
-            this.check_odp_4.TabIndex = 5;
-            this.check_odp_4.UseVisualStyleBackColor = true;
-            // 
-            // check_odp_5
-            // 
-            this.check_odp_5.AutoSize = true;
-            this.check_odp_5.Location = new System.Drawing.Point(43, 350);
-            this.check_odp_5.Name = "check_odp_5";
-            this.check_odp_5.Size = new System.Drawing.Size(18, 17);
-            this.check_odp_5.TabIndex = 6;
-            this.check_odp_5.UseVisualStyleBackColor = true;
-            // 
             // but_nastepne_pyt
             // 
             this.but_nastepne_pyt.Location = new System.Drawing.Point(465, 492);
@@ -171,16 +181,7 @@
             this.but_nastepne_pyt.TabIndex = 6;
             this.but_nastepne_pyt.Text = "Następne pytanie";
             this.but_nastepne_pyt.UseVisualStyleBackColor = true;
-            // 
-            // lab_numer_pytania
-            // 
-            this.lab_numer_pytania.AutoSize = true;
-            this.lab_numer_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lab_numer_pytania.Location = new System.Drawing.Point(524, 10);
-            this.lab_numer_pytania.Name = "lab_numer_pytania";
-            this.lab_numer_pytania.Size = new System.Drawing.Size(87, 29);
-            this.lab_numer_pytania.TabIndex = 8;
-            this.lab_numer_pytania.Text = "label4";
+            this.but_nastepne_pyt.Click += new System.EventHandler(this.but_nastepne_pyt_Click);
             // 
             // Test
             // 

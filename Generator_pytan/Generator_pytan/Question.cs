@@ -8,17 +8,20 @@ namespace Generator_pytan
 {
     class Question
     {   //atrybuty klasy
-        String content; //zmienna tresc pytania 
-        int points; //waga punktowa pytania 
-        List<Answer> answers; // lista obiektow odpoiwedz ( lista zawiera w sobie obiekty klasy Answer )
-        //Question(tu parametry konstruktora!)
-        public Question(String content, int points) {//publiczny czyli jest widoczny dla innych klas, konstruktor umozliwia stworzenie obiektu klasy Question
-            this.content = content; // przypisuje parametr content (okreslony  w konstruktorze ) do atrybutu klasy content 
-            this.points = points; // przypisuje parametr points (okreslony  w konstruktorze ) do atrybutu klasy points
-            this.answers = new List<Answer>();  //inicjalizacja listy 
 
-        }
+        public String tresc { get; set; } //zmienna tresc pytania 
+        public int ilosc_odp{ get; set; }
+        public String odp_1 { get; set; }
+        public String odp_2 { get; set; }
+        public String odp_3 { get; set; }
+        public String odp_4 { get; set; }
+        public String odp_5 { get; set; }
+        public int odp_1_poprawna { get; set; }
+        public int odp_2_poprawna { get; set; }
+        public int odp_3_poprawna { get; set; }
+        public int odp_4_poprawna { get; set; }
+        public int odp_5_poprawna { get; set; }
 
-
+       public static  List<Question> listaPytan = new List<Question>();//Utworzenie nowej listy pytań
     }
 }
