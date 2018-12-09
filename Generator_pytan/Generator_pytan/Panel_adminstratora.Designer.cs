@@ -52,7 +52,7 @@
             this.openFileDialog1.FilterIndex = 3;
             this.openFileDialog1.InitialDirectory = "c:\\\\";
             this.openFileDialog1.RestoreDirectory = true;
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            
             // 
             // button2
             // 
