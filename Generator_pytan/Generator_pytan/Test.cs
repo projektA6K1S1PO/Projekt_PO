@@ -12,6 +12,9 @@ namespace Generator_pytan
 {
     public partial class Test : Form
     {
+
+        public static string[,] baza_pytan_array;
+
         public Test()
         {
             InitializeComponent();
@@ -24,7 +27,7 @@ namespace Generator_pytan
 
         private void Test_Load(object sender, EventArgs e)
         {
-            label1.Text = Panel_adminstratora.filePath;//Szybkie wyswietlenie sciezki do pliku
+            label1.Text = baza_pytan_array[0,0];//Szybkie wyswietlenie sciezki do pliku
         }
 
         private void button1_Click_1(object sender, EventArgs e)

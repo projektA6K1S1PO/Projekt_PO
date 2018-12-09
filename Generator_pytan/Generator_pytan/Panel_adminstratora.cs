@@ -17,6 +17,7 @@ namespace Generator_pytan
 
         
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
+        
 
 
 
@@ -36,9 +37,8 @@ namespace Generator_pytan
             }
 
             // Get the data.
-            string[,] values = LoadCsv(filePath);
-            int num_rows = values.GetUpperBound(0) + 1;
-            int num_cols = values.GetUpperBound(1) + 1;
+            Test.baza_pytan_array = LoadCsv(filePath);
+            label2.Text = Test.baza_pytan_array[0, 0];
 
         }
 
