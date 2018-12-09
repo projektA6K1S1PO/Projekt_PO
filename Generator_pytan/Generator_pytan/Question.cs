@@ -22,6 +22,8 @@ namespace Generator_pytan
         public int odp_4_poprawna { get; set; }
         public int odp_5_poprawna { get; set; }
 
+        //Zmienne publiczne i statyczne
        public static  List<Question> listaPytan = new List<Question>();//Utworzenie nowej listy pytań
+       public static string[,] baza_pytan_array;
     }
 }

@@ -33,8 +33,8 @@ namespace Generator_pytan
             }
 
             // Pobierz danę z pliku do tablicy
-            Test.baza_pytan_array = LoadCsv(filePath);
-            label2.Text = Test.baza_pytan_array[0, 0];//Wyświetl nazwę zestawu dla użytkownika
+            Question.baza_pytan_array = LoadCsv(filePath);
+            label2.Text = Question.baza_pytan_array[0, 0];//Wyświetl nazwę zestawu dla użytkownika
 
         }
 
