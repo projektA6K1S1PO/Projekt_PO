@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.but_nastepne_pyt = new System.Windows.Forms.Button();
+            this.lab_wynik = new System.Windows.Forms.Label();
             this.panel_pytan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,11 +184,22 @@
             this.but_nastepne_pyt.UseVisualStyleBackColor = true;
             this.but_nastepne_pyt.Click += new System.EventHandler(this.but_nastepne_pyt_Click);
             // 
+            // lab_wynik
+            // 
+            this.lab_wynik.AutoSize = true;
+            this.lab_wynik.Location = new System.Drawing.Point(53, 269);
+            this.lab_wynik.Name = "lab_wynik";
+            this.lab_wynik.Size = new System.Drawing.Size(46, 17);
+            this.lab_wynik.TabIndex = 7;
+            this.lab_wynik.Text = "label4";
+            this.lab_wynik.Visible = false;
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 622);
+            this.Controls.Add(this.lab_wynik);
             this.Controls.Add(this.but_nastepne_pyt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -221,5 +233,6 @@
         private System.Windows.Forms.CheckBox check_odp_5;
         private System.Windows.Forms.Button but_nastepne_pyt;
         private System.Windows.Forms.Label lab_numer_pytania;
+        private System.Windows.Forms.Label lab_wynik;
     }
 }

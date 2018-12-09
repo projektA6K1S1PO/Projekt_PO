@@ -14,6 +14,7 @@ namespace Generator_pytan
     {
 
         public static int numer_pytania=0;//Zmienna lokalna,testowa numer aktualnie 
+        public static int wynik = 0;
         //wyświetlanego pytania (numer bezwzględny nawet przy losowych pytaniach
         
 
@@ -56,12 +57,13 @@ namespace Generator_pytan
         {
             //Obsługa kontrolek okienka test
             lab_tresc_pytania.Text =    Question.listaPytan[numer_pytania].tresc;//Wyświetl treść pytania
-            lab_numer_pytania.Text =    Convert.ToString( numer_pytania);//Wyświetl numer pytania z kolei
+            lab_numer_pytania.Text =    Convert.ToString(numer_pytania+1);//Wyświetl numer pytania z kolei
             check_odp_1.Text=           Question.listaPytan[numer_pytania].odp_1;//Wyświetlaj kolejno treści odpowiedzi
             check_odp_2.Text =          Question.listaPytan[numer_pytania].odp_2;
             check_odp_3.Text =          Question.listaPytan[numer_pytania].odp_3;
             check_odp_4.Text =          Question.listaPytan[numer_pytania].odp_4;
             check_odp_5.Text =          Question.listaPytan[numer_pytania].odp_5;
+            lab_wynik.Text = Convert.ToString(wynik);
             
         }
 
@@ -97,10 +99,12 @@ namespace Generator_pytan
 
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
+            sprawdz_odp();
+            zeruj_odp();
             numer_pytania++;
             if (numer_pytania > 19)
             {
-                MessageBox.Show("Koniec Testu");
+                MessageBox.Show("Koniec Testu \nTwój wynik to:"+wynik+" Punktów");
             }
             else
             {
@@ -108,6 +112,40 @@ namespace Generator_pytan
             }
             
             
+        }
+
+        private void sprawdz_odp()
+        {
+            if (check_odp_1.Checked)
+            {
+                wynik += Question.listaPytan[numer_pytania].odp_1_poprawna;
+            }
+            if (check_odp_2.Checked)
+            {
+                wynik += Question.listaPytan[numer_pytania].odp_2_poprawna;
+            }
+            if (check_odp_3.Checked)
+            {
+                wynik += Question.listaPytan[numer_pytania].odp_3_poprawna;
+            }
+            if (check_odp_4.Checked)
+            {
+                wynik += Question.listaPytan[numer_pytania].odp_4_poprawna;
+            }
+            if (check_odp_5.Checked)
+            {
+                wynik += Question.listaPytan[numer_pytania].odp_5_poprawna;
+            }
+
+        }
+        private void zeruj_odp()
+        {
+            check_odp_1.Checked = false;
+            check_odp_2.Checked = false;
+            check_odp_3.Checked = false;
+            check_odp_4.Checked = false;
+            check_odp_5.Checked = false;
+
         }
     }
 }
