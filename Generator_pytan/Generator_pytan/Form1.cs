@@ -48,7 +48,11 @@ namespace Generator_pytan
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();//Zamknij forme wybor
+            LogAdmin LogAdmin = new LogAdmin();
+            LogAdmin.Show();//Otworz forme logowanie
 
         }
     }
+    
 }
