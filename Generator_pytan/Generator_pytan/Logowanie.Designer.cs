@@ -59,6 +59,7 @@
             this.login_box.Name = "login_box";
             this.login_box.Size = new System.Drawing.Size(145, 22);
             this.login_box.TabIndex = 2;
+            this.login_box.TextChanged += new System.EventHandler(this.login_box_TextChanged);
             // 
             // haslo_box
             // 

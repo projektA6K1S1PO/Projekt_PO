@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace Generator_pytan
 {
-    public partial class Logowanie : Form
+    public partial class LogAdmin : Form
     {
-        public Logowanie()
+        public LogAdmin()
         {
             InitializeComponent();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (login_box.Text == Properties.Settings.Default.Login &&  haslo_box.Text == Properties.Settings.Default.Haslo)//Sprawdzenie hasla i loginu
+            if (login_box.Text == Properties.Settings.Default.Login && haslo_box.Text == Properties.Settings.Default.Haslo)//Sprawdzenie hasla i loginu
             {
                 this.Hide();//Zamknij forme Logowanie
                 Panel_adminstratora Panel_adminstratora = new Panel_adminstratora();
@@ -27,14 +28,10 @@ namespace Generator_pytan
             }
             else
             {
-                MessageBox.Show("Zły login lub hasło", "Błędne dane logowania",MessageBoxButtons.OK,MessageBoxIcon.Warning);//MsgBox zle dane logowania
+                MessageBox.Show("Zły login lub hasło", "Błędne dane logowania", MessageBoxButtons.OK, MessageBoxIcon.Warning);//MsgBox zle dane logowania
             }
-          
-        }
-
-        private void login_box_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
 }
+  

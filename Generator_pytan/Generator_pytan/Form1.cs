@@ -45,5 +45,10 @@ namespace Generator_pytan
             Logowanie.Show();//Otworz forme logowanie
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
