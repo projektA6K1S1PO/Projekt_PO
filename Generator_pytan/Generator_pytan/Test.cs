@@ -150,5 +150,17 @@ namespace Generator_pytan
             check_odp_5.Checked = false;
 
         }
+
+        private void but_stop_test_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+
+            result = MessageBox.Show("Czy napewno chcesz zakończyć test i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            
+        }
     }
 }
