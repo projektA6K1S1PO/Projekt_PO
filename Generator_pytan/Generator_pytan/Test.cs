@@ -50,6 +50,14 @@ namespace Generator_pytan
             //losowanie();//Tutaj musi następować funkcja losowania
             panel_pytan.Visible = true;//Pokaż panel pytań
             but_start_test.Visible = false;//Wyłącz przycisk rozpoczęcie testu
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
 
             wyswietlaj_pytanie();//Wyświetlaj pierwsze pytanie żeby nie było pustych labelek
         }
@@ -161,6 +169,31 @@ namespace Generator_pytan
                 this.Close();
             }
             
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lab_wynik_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

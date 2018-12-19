@@ -101,6 +101,7 @@
             this.Controls.Add(this.button1);
             this.Name = "LogAdmin";
             this.Text = "Logowanie Administrator";
+            this.Load += new System.EventHandler(this.LogAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

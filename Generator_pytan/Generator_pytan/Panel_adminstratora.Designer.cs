@@ -52,7 +52,6 @@
             this.openFileDialog1.FilterIndex = 3;
             this.openFileDialog1.InitialDirectory = "c:\\\\";
             this.openFileDialog1.RestoreDirectory = true;
-            
             // 
             // button2
             // 
@@ -94,6 +93,7 @@
             this.Name = "Panel_adminstratora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panel_adminstratora";
+            this.Load += new System.EventHandler(this.Panel_adminstratora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

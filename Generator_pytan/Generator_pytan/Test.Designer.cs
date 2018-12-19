@@ -43,6 +43,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.but_nastepne_pyt = new System.Windows.Forms.Button();
             this.lab_wynik = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel_pytan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,14 +86,22 @@
             // 
             // panel_pytan
             // 
+            this.panel_pytan.Controls.Add(this.label4);
             this.panel_pytan.Controls.Add(this.lab_numer_pytania);
+            this.panel_pytan.Controls.Add(this.textBox1);
+            this.panel_pytan.Controls.Add(this.textBox2);
             this.panel_pytan.Controls.Add(this.check_odp_5);
+            this.panel_pytan.Controls.Add(this.textBox4);
             this.panel_pytan.Controls.Add(this.check_odp_4);
+            this.panel_pytan.Controls.Add(this.label5);
             this.panel_pytan.Controls.Add(this.check_odp_3);
             this.panel_pytan.Controls.Add(this.check_odp_2);
+            this.panel_pytan.Controls.Add(this.textBox3);
             this.panel_pytan.Controls.Add(this.check_odp_1);
             this.panel_pytan.Controls.Add(this.lab_tresc_pytania);
             this.panel_pytan.Controls.Add(this.label2);
+            this.panel_pytan.Controls.Add(this.label6);
+            this.panel_pytan.Controls.Add(this.label7);
             this.panel_pytan.Location = new System.Drawing.Point(193, 85);
             this.panel_pytan.Name = "panel_pytan";
             this.panel_pytan.Size = new System.Drawing.Size(623, 401);
@@ -188,12 +204,81 @@
             // lab_wynik
             // 
             this.lab_wynik.AutoSize = true;
-            this.lab_wynik.Location = new System.Drawing.Point(53, 269);
+            this.lab_wynik.Location = new System.Drawing.Point(60, 245);
             this.lab_wynik.Name = "lab_wynik";
             this.lab_wynik.Size = new System.Drawing.Size(46, 17);
             this.lab_wynik.TabIndex = 7;
             this.lab_wynik.Text = "label4";
             this.lab_wynik.Visible = false;
+            this.lab_wynik.Click += new System.EventHandler(this.lab_wynik_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(204, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Imie";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(204, 130);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Nazwisko";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(204, 158);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Numer Indeksu";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(204, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Grupa";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(317, 95);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(95, 22);
+            this.textBox1.TabIndex = 13;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(317, 127);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(95, 22);
+            this.textBox2.TabIndex = 14;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(317, 155);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(95, 22);
+            this.textBox3.TabIndex = 15;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(317, 183);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(95, 22);
+            this.textBox4.TabIndex = 16;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // Test
             // 
@@ -235,5 +320,13 @@
         private System.Windows.Forms.Button but_nastepne_pyt;
         private System.Windows.Forms.Label lab_numer_pytania;
         private System.Windows.Forms.Label lab_wynik;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

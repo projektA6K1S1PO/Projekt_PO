@@ -79,5 +79,10 @@ namespace Generator_pytan
             // Zwróc tablicę w wyniku
             return values;
         }
+
+        private void Panel_adminstratora_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

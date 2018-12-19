@@ -17,7 +17,6 @@ namespace Generator_pytan
             InitializeComponent();
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (login_box.Text == Properties.Settings.Default.Login && haslo_box.Text == Properties.Settings.Default.Haslo)//Sprawdzenie hasla i loginu
@@ -38,6 +37,11 @@ namespace Generator_pytan
             this.Hide();//Powróc do panelu głównego
             Panel_wyboru Panel_wyboru = new Panel_wyboru();
             Panel_wyboru.Show();//Otwórz panel wyboru
+        }
+
+        private void LogAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -36,5 +36,17 @@ namespace Generator_pytan
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();//Powróc do panelu głównego
+            Panel_wyboru Panel_wyboru = new Panel_wyboru();
+            Panel_wyboru.Show();//Otwórz panel wyboru
+        }
+
+        private void Logowanie_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
