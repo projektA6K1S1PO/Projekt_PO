@@ -93,7 +93,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 94);
+            this.label1.Location = new System.Drawing.Point(10, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 17);
             this.label1.TabIndex = 2;
@@ -103,7 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(217, 139);
+            this.label2.Location = new System.Drawing.Point(175, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 3;
@@ -120,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(141, 139);
+            this.label3.Location = new System.Drawing.Point(129, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 5;
@@ -240,7 +240,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(40, 22);
             this.textBox1.TabIndex = 18;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -335,7 +334,6 @@
             this.widelki.TabIndex = 30;
             this.widelki.Text = "zapisz widełki";
             this.widelki.UseVisualStyleBackColor = true;
-            this.widelki.Click += new System.EventHandler(this.button4_Click);
             // 
             // Panel_adminstratora
             // 

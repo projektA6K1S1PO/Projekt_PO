@@ -84,15 +84,5 @@ namespace Generator_pytan
         {
 
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

@@ -113,7 +113,8 @@ namespace Generator_pytan
             numer_pytania++;//Przejdz do następnego pytania
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
-                MessageBox.Show("Koniec Testu \nTwój wynik to:"+wynik+" Punktów na" + maxodp + " Punktów");
+                Question.maxpkt = Convert.ToInt32( Question.baza_pytan_array[0, 18]) ;//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
+                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+" Punktów na " + Question.maxpkt + " możliwych");
             }
             else
             {
