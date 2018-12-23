@@ -59,6 +59,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.widelki = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -239,6 +240,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(40, 22);
             this.textBox1.TabIndex = 18;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -325,11 +327,22 @@
             this.label19.TabIndex = 29;
             this.label19.Text = "% ";
             // 
+            // widelki
+            // 
+            this.widelki.Location = new System.Drawing.Point(404, 178);
+            this.widelki.Name = "widelki";
+            this.widelki.Size = new System.Drawing.Size(115, 78);
+            this.widelki.TabIndex = 30;
+            this.widelki.Text = "zapisz widełki";
+            this.widelki.UseVisualStyleBackColor = true;
+            this.widelki.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Panel_adminstratora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 339);
+            this.Controls.Add(this.widelki);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -402,5 +415,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button widelki;
     }
 }

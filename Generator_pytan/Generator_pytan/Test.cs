@@ -105,7 +105,7 @@ namespace Generator_pytan
             }
 
         }
-
+        //int maxodp= Convert.ToInt16(Question.baza_pytan_array[2, 19]); myślałem ze jakoś tak Piotrek 
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
             sprawdz_odp();//Sprawdz poprawność odp dodaj punkty do wyniku
@@ -113,7 +113,7 @@ namespace Generator_pytan
             numer_pytania++;//Przejdz do następnego pytania
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
-                MessageBox.Show("Koniec Testu \nTwój wynik to:"+wynik+" Punktów");
+                MessageBox.Show("Koniec Testu \nTwój wynik to:"+wynik+" Punktów na" + maxodp + " Punktów");
             }
             else
             {
