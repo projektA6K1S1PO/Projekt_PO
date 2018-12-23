@@ -84,5 +84,16 @@ namespace Generator_pytan
         {
 
         }
+
+        private void widelki_Click(object sender, EventArgs e)
+        {
+            int ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
+            int dstOd = Convert.ToInt16(dostatecznyOd.Text);
+            int dstDo = Convert.ToInt16(dostatecznyDo.Text);
+            int dbOd = Convert.ToInt16(dobryOd.Text);
+            int dbDo = Convert.ToInt16(dobryDo.Text);
+            int bdbOd = Convert.ToInt16(bardzodobryOd.Text);
+
+        }
     }
 }
