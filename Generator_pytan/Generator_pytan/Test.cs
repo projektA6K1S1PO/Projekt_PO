@@ -113,8 +113,20 @@ namespace Generator_pytan
             numer_pytania++;//Przejdz do następnego pytania
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
+                int procenty = (wynik / Question.maxpkt)*100;
+                string ocena;
+                if (procenty < ndstDo)
+                    ocena = "2";
+                else if (ndstDo >= procenty < dstDo)
+                    ocena = "3";
+                else if (dstDo >= procenty < dbDo)
+                    ocena = "4";
+                else if (procenty >= dbDo)
+                    ocena = "5";
+
+
                 Question.maxpkt = Convert.ToInt32( Question.baza_pytan_array[0, 18]) ;//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
-                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+" Punktów na " + Question.maxpkt + " możliwych");
+                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \n na " + Question.maxpkt + " możliwych \n ocena "+ocena);
             }
             else
             {

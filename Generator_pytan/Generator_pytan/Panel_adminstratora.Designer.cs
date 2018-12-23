@@ -38,14 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.dostatecznyOd = new System.Windows.Forms.TextBox();
-            this.dobryOd = new System.Windows.Forms.TextBox();
-            this.bardzodobryOd = new System.Windows.Forms.TextBox();
             this.niedostatecznyDo = new System.Windows.Forms.TextBox();
             this.dostatecznyDo = new System.Windows.Forms.TextBox();
             this.dobryDo = new System.Windows.Forms.TextBox();
@@ -54,7 +47,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.widelki = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -148,97 +141,40 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "dobry";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 253);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 17);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "bardz dobry ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(163, 197);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 17);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "od";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(163, 226);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 17);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "od";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(163, 253);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 17);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "od";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(239, 166);
+            this.label12.Location = new System.Drawing.Point(143, 168);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 17);
             this.label12.TabIndex = 14;
             this.label12.Text = "     do";
             // 
-            // dostatecznyOd
-            // 
-            this.dostatecznyOd.Location = new System.Drawing.Point(193, 192);
-            this.dostatecznyOd.Name = "dostatecznyOd";
-            this.dostatecznyOd.Size = new System.Drawing.Size(40, 22);
-            this.dostatecznyOd.TabIndex = 19;
-            // 
-            // dobryOd
-            // 
-            this.dobryOd.Location = new System.Drawing.Point(193, 221);
-            this.dobryOd.Name = "dobryOd";
-            this.dobryOd.Size = new System.Drawing.Size(40, 22);
-            this.dobryOd.TabIndex = 20;
-            // 
-            // bardzodobryOd
-            // 
-            this.bardzodobryOd.Location = new System.Drawing.Point(193, 248);
-            this.bardzodobryOd.Name = "bardzodobryOd";
-            this.bardzodobryOd.Size = new System.Drawing.Size(40, 22);
-            this.bardzodobryOd.TabIndex = 21;
-            // 
             // niedostatecznyDo
             // 
-            this.niedostatecznyDo.Location = new System.Drawing.Point(287, 163);
+            this.niedostatecznyDo.Location = new System.Drawing.Point(193, 167);
             this.niedostatecznyDo.Name = "niedostatecznyDo";
-            this.niedostatecznyDo.Size = new System.Drawing.Size(40, 22);
+            this.niedostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.niedostatecznyDo.TabIndex = 22;
             // 
             // dostatecznyDo
             // 
-            this.dostatecznyDo.Location = new System.Drawing.Point(287, 190);
+            this.dostatecznyDo.Location = new System.Drawing.Point(193, 197);
             this.dostatecznyDo.Name = "dostatecznyDo";
-            this.dostatecznyDo.Size = new System.Drawing.Size(40, 22);
+            this.dostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.dostatecznyDo.TabIndex = 23;
             // 
             // dobryDo
             // 
-            this.dobryDo.Location = new System.Drawing.Point(287, 221);
+            this.dobryDo.Location = new System.Drawing.Point(193, 223);
             this.dobryDo.Name = "dobryDo";
-            this.dobryDo.Size = new System.Drawing.Size(40, 22);
+            this.dobryDo.Size = new System.Drawing.Size(55, 22);
             this.dobryDo.TabIndex = 24;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(333, 168);
+            this.label16.Location = new System.Drawing.Point(254, 167);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(24, 17);
             this.label16.TabIndex = 26;
@@ -247,7 +183,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(333, 195);
+            this.label17.Location = new System.Drawing.Point(254, 197);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(24, 17);
             this.label17.TabIndex = 27;
@@ -256,7 +192,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(333, 224);
+            this.label18.Location = new System.Drawing.Point(254, 226);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(24, 17);
             this.label18.TabIndex = 28;
@@ -264,7 +200,7 @@
             // 
             // widelki
             // 
-            this.widelki.Location = new System.Drawing.Point(404, 178);
+            this.widelki.Location = new System.Drawing.Point(353, 181);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;
@@ -275,27 +211,27 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(239, 195);
+            this.label8.Location = new System.Drawing.Point(163, 197);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 17);
+            this.label8.Size = new System.Drawing.Size(24, 17);
             this.label8.TabIndex = 31;
-            this.label8.Text = "%  do";
+            this.label8.Text = "do";
             // 
-            // label13
+            // label9
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(239, 226);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 17);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "%  do";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(163, 226);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 17);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "do";
             // 
             // Panel_adminstratora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 339);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.widelki);
             this.Controls.Add(this.label18);
@@ -304,14 +240,7 @@
             this.Controls.Add(this.dobryDo);
             this.Controls.Add(this.dostatecznyDo);
             this.Controls.Add(this.niedostatecznyDo);
-            this.Controls.Add(this.bardzodobryOd);
-            this.Controls.Add(this.dobryOd);
-            this.Controls.Add(this.dostatecznyOd);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -342,14 +271,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox dostatecznyOd;
-        private System.Windows.Forms.TextBox dobryOd;
-        private System.Windows.Forms.TextBox bardzodobryOd;
         private System.Windows.Forms.TextBox niedostatecznyDo;
         private System.Windows.Forms.TextBox dostatecznyDo;
         private System.Windows.Forms.TextBox dobryDo;
@@ -358,6 +280,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button widelki;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label9;
     }
 }
