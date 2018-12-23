@@ -14,7 +14,7 @@ namespace Generator_pytan
 {
     public partial class Panel_adminstratora : Form
     {
-  
+
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
 
         public Panel_adminstratora()
@@ -24,12 +24,12 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-     
-            if(openFileDialog1.ShowDialog()==DialogResult.OK)//Prawidlowo otwarty plik
+
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)//Prawidlowo otwarty plik
             {
                 filePath = openFileDialog1.FileName;//Wyłuskanie sciezki do pliku z pytaniami
-          
+
             }
 
             // Pobierz danę z pliku do tablicy
@@ -46,7 +46,7 @@ namespace Generator_pytan
             Panel_wyboru.Show();//Otwórz panel wyboru
         }
 
-      
+
         // Załaduj plik CSV do tablicy
 
         private string[,] LoadCsv(string filename)
@@ -87,11 +87,20 @@ namespace Generator_pytan
 
         private void widelki_Click(object sender, EventArgs e)
         {
-            int ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
-            int dstDo = Convert.ToInt16(dostatecznyDo.Text);
-            int dbDo = Convert.ToInt16(dobryDo.Text);
+            // niby wszystko ok ale tu wartosci poprawne a po przeniesieniu do Testu wynosza 0 :( 
             
+                int ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
+                int dstDo = Convert.ToInt16(dostatecznyDo.Text);
+                int dbDo = Convert.ToInt16(dobryDo.Text);
+            MessageBox.Show(ndstDo + "\n" + dstDo + "\n" + dbDo);
+
         }
 
+            public static int ndstDo = ndstDo;
+            public static int dstDo = dstDo;
+            public static int dbDo = dbDo;
+
     }
+
 }
+

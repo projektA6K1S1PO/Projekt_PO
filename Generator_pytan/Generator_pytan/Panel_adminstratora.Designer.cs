@@ -156,6 +156,7 @@
             this.niedostatecznyDo.Name = "niedostatecznyDo";
             this.niedostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.niedostatecznyDo.TabIndex = 22;
+            this.niedostatecznyDo.Text = "40";
             // 
             // dostatecznyDo
             // 
@@ -163,6 +164,7 @@
             this.dostatecznyDo.Name = "dostatecznyDo";
             this.dostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.dostatecznyDo.TabIndex = 23;
+            this.dostatecznyDo.Text = "60";
             // 
             // dobryDo
             // 
@@ -170,6 +172,7 @@
             this.dobryDo.Name = "dobryDo";
             this.dobryDo.Size = new System.Drawing.Size(55, 22);
             this.dobryDo.TabIndex = 24;
+            this.dobryDo.Text = "80";
             // 
             // label16
             // 
@@ -200,7 +203,7 @@
             // 
             // widelki
             // 
-            this.widelki.Location = new System.Drawing.Point(353, 181);
+            this.widelki.Location = new System.Drawing.Point(345, 165);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;

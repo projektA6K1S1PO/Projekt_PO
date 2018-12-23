@@ -108,25 +108,36 @@ namespace Generator_pytan
         //int maxodp= Convert.ToInt16(Question.baza_pytan_array[2, 19]); myślałem ze jakoś tak Piotrek 
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
+            
             sprawdz_odp();//Sprawdz poprawność odp dodaj punkty do wyniku
             zeruj_odp();//Zeruj zaznaczenia checkboxów
             numer_pytania++;//Przejdz do następnego pytania
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
+                Question.maxpkt = Convert.ToInt32(Question.baza_pytan_array[0, 18]);//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
                 int procenty = (wynik / Question.maxpkt)*100;
-                string ocena;
-                if (procenty < ndstDo)
+                string ocena="0";
+                
+                if (procenty < Panel_adminstratora.ndstDo)
+                    {
                     ocena = "2";
-                else if (ndstDo >= procenty < dstDo)
+                     }
+                else if (procenty >= Panel_adminstratora.ndstDo && procenty < Panel_adminstratora.dstDo)
+                   {
                     ocena = "3";
-                else if (dstDo >= procenty < dbDo)
+                    }
+                else if (procenty >= Panel_adminstratora.dstDo && procenty < Panel_adminstratora.dbDo)
+                    {
                     ocena = "4";
-                else if (procenty >= dbDo)
+                       }
+                else if (procenty >= Panel_adminstratora.dbDo)
+                    {
                     ocena = "5";
+                    }
 
 
-                Question.maxpkt = Convert.ToInt32( Question.baza_pytan_array[0, 18]) ;//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
-                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \n na " + Question.maxpkt + " możliwych \n ocena "+ocena);
+                
+                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: "+ocena + "\n Procent: " + procenty);
             }
             else
             {
