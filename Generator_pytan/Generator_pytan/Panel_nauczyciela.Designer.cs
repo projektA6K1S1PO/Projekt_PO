@@ -1,6 +1,6 @@
 ﻿namespace Generator_pytan
 {
-    partial class Panel_adminstratora
+    partial class Panel_nauczyciela
     {
         /// <summary>
         /// Required designer variable.
@@ -108,11 +108,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 132);
+            this.label3.Location = new System.Drawing.Point(28, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Widełki ocen ";
+            this.label3.Text = "Widełki ocen:";
             // 
             // label4
             // 
@@ -233,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 339);
+            this.ClientSize = new System.Drawing.Size(519, 270);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.widelki);
@@ -253,9 +253,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Panel_adminstratora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Panel_adminstratora";
+            this.Text = "Panel Nauczyciela";
             this.Load += new System.EventHandler(this.Panel_adminstratora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

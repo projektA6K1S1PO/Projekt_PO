@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Generator_pytan
 {
-    public partial class Logowanie : Form
+    public partial class Logowanie_nauczyciela : Form
     {
-        public Logowanie()
+        public Logowanie_nauczyciela()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Generator_pytan
             if (login_box.Text == Properties.Settings.Default.Login &&  haslo_box.Text == Properties.Settings.Default.Haslo)//Sprawdzenie hasla i loginu
             {
                 this.Hide();//Zamknij forme Logowanie
-                Panel_adminstratora Panel_adminstratora = new Panel_adminstratora();
+                Panel_nauczyciela Panel_adminstratora = new Panel_nauczyciela();
                 Panel_adminstratora.Show();//Otworz panel administratora
             }
             else
@@ -47,6 +47,11 @@ namespace Generator_pytan
         private void Logowanie_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Logowanie_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();//Bezwarunkowe zamknięcie aplikacji
         }
     }
 }

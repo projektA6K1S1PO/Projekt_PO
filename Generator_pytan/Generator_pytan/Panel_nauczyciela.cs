@@ -12,12 +12,12 @@ using System.IO;
 
 namespace Generator_pytan
 {
-    public partial class Panel_adminstratora : Form
+    public partial class Panel_nauczyciela : Form
     {
 
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
 
-        public Panel_adminstratora()
+        public Panel_nauczyciela()
         {
             InitializeComponent();
         }
@@ -29,12 +29,13 @@ namespace Generator_pytan
             if (openFileDialog1.ShowDialog() == DialogResult.OK)//Prawidlowo otwarty plik
             {
                 filePath = openFileDialog1.FileName;//Wyłuskanie sciezki do pliku z pytaniami
-
+                Question.baza_pytan_array = LoadCsv(filePath); // Pobierz danę z pliku do tablicy
+                label2.Text = Question.baza_pytan_array[0, 0];//Wyświetl nazwę zestawu dla użytkownika
             }
 
-            // Pobierz danę z pliku do tablicy
-            Question.baza_pytan_array = LoadCsv(filePath);
-            label2.Text = Question.baza_pytan_array[0, 0];//Wyświetl nazwę zestawu dla użytkownika
+           
+            
+            
 
         }
 

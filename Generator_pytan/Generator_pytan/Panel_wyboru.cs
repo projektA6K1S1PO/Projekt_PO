@@ -16,6 +16,8 @@ namespace Generator_pytan
         public Panel_wyboru()
         {
             InitializeComponent();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,7 +27,7 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!(Panel_adminstratora.filePath == null))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
+            if (!(Panel_nauczyciela.filePath == null))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
             {
                 this.Hide();//Zamknij forme wybor
                 Test Test = new Test();
@@ -41,7 +43,7 @@ namespace Generator_pytan
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();//Zamknij forme wybor
-            Logowanie Logowanie = new Logowanie();
+            Logowanie_nauczyciela Logowanie = new Logowanie_nauczyciela();
             Logowanie.Show();//Otworz forme logowanie
             
         }
@@ -49,7 +51,7 @@ namespace Generator_pytan
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();//Zamknij forme wybor
-            LogAdmin LogAdmin = new LogAdmin();
+            Logowanie_administratora LogAdmin = new Logowanie_administratora();
             LogAdmin.Show();//Otworz forme logowanie
 
         }

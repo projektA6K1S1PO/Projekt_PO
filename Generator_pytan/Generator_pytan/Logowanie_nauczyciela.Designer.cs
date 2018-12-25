@@ -1,6 +1,6 @@
 ﻿namespace Generator_pytan
 {
-    partial class Logowanie
+    partial class Logowanie_nauczyciela
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 59);
+            this.label1.Location = new System.Drawing.Point(90, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 111);
+            this.label2.Location = new System.Drawing.Point(89, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 17);
             this.label2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // login_box
             // 
-            this.login_box.Location = new System.Drawing.Point(174, 59);
+            this.login_box.Location = new System.Drawing.Point(139, 20);
             this.login_box.Name = "login_box";
             this.login_box.Size = new System.Drawing.Size(145, 22);
             this.login_box.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // haslo_box
             // 
-            this.haslo_box.Location = new System.Drawing.Point(174, 108);
+            this.haslo_box.Location = new System.Drawing.Point(139, 67);
             this.haslo_box.Name = "haslo_box";
             this.haslo_box.PasswordChar = '*';
             this.haslo_box.Size = new System.Drawing.Size(145, 22);
@@ -72,7 +72,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(174, 170);
+            this.button1.Location = new System.Drawing.Point(176, 113);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 31);
             this.button1.TabIndex = 4;
@@ -82,11 +82,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(26, 156);
+            this.button2.Location = new System.Drawing.Point(77, 113);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 59);
+            this.button2.Size = new System.Drawing.Size(84, 31);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Powrót do panelu głownego";
+            this.button2.Text = "Powrót ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -94,16 +94,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 243);
+            this.ClientSize = new System.Drawing.Size(366, 152);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.haslo_box);
             this.Controls.Add(this.login_box);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Logowanie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Logowanie";
+            this.Text = "Logowanie nauczyciela";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Logowanie_FormClosed);
             this.Load += new System.EventHandler(this.Logowanie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

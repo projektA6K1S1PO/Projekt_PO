@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -61,24 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Answer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Panel_wyboru.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Panel_wyboru.Designer.cs">
+      <DependentUpon>Panel_wyboru.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogAdmin.cs">
+    <Compile Include="Logowanie_administratora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogAdmin.Designer.cs">
-      <DependentUpon>LogAdmin.cs</DependentUpon>
+    <Compile Include="Logowanie_administratora.Designer.cs">
+      <DependentUpon>Logowanie_administratora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logowanie.cs">
+    <Compile Include="Logowanie_nauczyciela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logowanie.Designer.cs">
-      <DependentUpon>Logowanie.cs</DependentUpon>
+    <Compile Include="Logowanie_nauczyciela.Designer.cs">
+      <DependentUpon>Logowanie_nauczyciela.cs</DependentUpon>
     </Compile>
     <Compile Include="Nauczyciele.cs">
       <SubType>Form</SubType>
@@ -86,35 +85,36 @@
     <Compile Include="Nauczyciele.Designer.cs">
       <DependentUpon>Nauczyciele.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_adminstratora.cs">
+    <Compile Include="Panel_nauczyciela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Panel_adminstratora.Designer.cs">
-      <DependentUpon>Panel_adminstratora.cs</DependentUpon>
+    <Compile Include="Panel_nauczyciela.Designer.cs">
+      <DependentUpon>Panel_nauczyciela.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Panel_wyboru.resx">
+      <DependentUpon>Panel_wyboru.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogAdmin.resx">
-      <DependentUpon>LogAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Logowanie_administratora.resx">
+      <DependentUpon>Logowanie_administratora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Logowanie.resx">
-      <DependentUpon>Logowanie.cs</DependentUpon>
+    <EmbeddedResource Include="Logowanie_nauczyciela.resx">
+      <DependentUpon>Logowanie_nauczyciela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nauczyciele.resx">
       <DependentUpon>Nauczyciele.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_adminstratora.resx">
-      <DependentUpon>Panel_adminstratora.cs</DependentUpon>
+    <EmbeddedResource Include="Panel_nauczyciela.resx">
+      <DependentUpon>Panel_nauczyciela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

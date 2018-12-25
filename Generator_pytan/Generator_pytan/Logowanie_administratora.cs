@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Generator_pytan
 {
-    public partial class LogAdmin : Form
+    public partial class Logowanie_administratora : Form
     {
-        public LogAdmin()
+        public Logowanie_administratora()
         {
             InitializeComponent();
         }
@@ -42,6 +42,11 @@ namespace Generator_pytan
         private void LogAdmin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();//Bezwarunkowe zamknięcie aplikacji
         }
     }
 }

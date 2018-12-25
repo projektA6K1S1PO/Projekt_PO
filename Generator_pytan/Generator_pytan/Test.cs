@@ -41,7 +41,15 @@ namespace Generator_pytan
         private void Test_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();//Bezwarunkowe zamknięcie aplikacji
-            //Należy dodać czy napewno użytkownik chce zamknąć aplikację i stracić wynik testu
+           //Należy dodać czy napewno użytkownik chce zamknąć aplikację i stracić wynik testu
+
+            DialogResult result;
+
+            result = MessageBox.Show("Czy napewno chcesz zakończyć test i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void start_test_Click_1(object sender, EventArgs e)
@@ -118,19 +126,19 @@ namespace Generator_pytan
                 int procenty = (wynik / Question.maxpkt)*100;
                 string ocena="0";
                 
-                if (procenty < Panel_adminstratora.ndstDo)
+                if (procenty < Panel_nauczyciela.ndstDo)
                     {
                     ocena = "2";
                      }
-                else if (procenty >= Panel_adminstratora.ndstDo && procenty < Panel_adminstratora.dstDo)
+                else if (procenty >= Panel_nauczyciela.ndstDo && procenty < Panel_nauczyciela.dstDo)
                    {
                     ocena = "3";
                     }
-                else if (procenty >= Panel_adminstratora.dstDo && procenty < Panel_adminstratora.dbDo)
+                else if (procenty >= Panel_nauczyciela.dstDo && procenty < Panel_nauczyciela.dbDo)
                     {
                     ocena = "4";
                        }
-                else if (procenty >= Panel_adminstratora.dbDo)
+                else if (procenty >= Panel_nauczyciela.dbDo)
                     {
                     ocena = "5";
                     }
