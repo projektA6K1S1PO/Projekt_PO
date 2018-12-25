@@ -25,6 +25,6 @@ namespace Generator_pytan
         //Zmienne publiczne i statyczne
         public static  List<Question> listaPytan = new List<Question>();//Utworzenie nowej listy pytań
         public static string[,] baza_pytan_array;
-        public static int maxpkt;  // Tu chyba coś takiego Piotrek
+        public static double maxpkt;  //Max ilość punktów do zdobycia pobrana z pliku z testem
     }
 }

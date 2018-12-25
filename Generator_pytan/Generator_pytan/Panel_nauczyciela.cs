@@ -92,6 +92,11 @@ namespace Generator_pytan
             MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
 
         }
+
+        private void Panel_nauczyciela_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();//Bezwarunkowe zamknięcie aplikacji
+        }
     }
 
 }

@@ -11,8 +11,10 @@ namespace Generator_pytan
         //Atrybuty klasy
         public String Imie { get; set; }
         public String Nazwisko { get; set; }
-        public int Nr_indeksu { get; set; }
+        public String Nr_indeksu { get; set; }
         public String Grupa { get; set; }
+
+        public static List<Student_oceny> listaStudentów = new List<Student_oceny>();//Utworzenie nowej listy pytań
 
         //Zmienne do widełek ocen
         public static int ndstDo;

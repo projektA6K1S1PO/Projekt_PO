@@ -32,6 +32,10 @@ namespace Generator_pytan
         private void Test_Load(object sender, EventArgs e)
         {
             label1.Text = Question.baza_pytan_array[0,0];//Pokaż nazwę zestawu
+            label_imie.Text= Student_oceny.listaStudentów[0].Imie;//Pokaż dane studenta
+            label_nazwisko.Text = Student_oceny.listaStudentów[0].Nazwisko;//Pokaż dane studenta
+            label_grupa.Text = Student_oceny.listaStudentów[0].Grupa;//Pokaż dane studenta
+            label_indeks.Text = Student_oceny.listaStudentów[0].Nr_indeksu;//Pokaż dane studenta
             generuj_obiekty_pytan();//Generuj obiekty klasy Question
             napelnij_danymi_obiekty();//Napełnij danymi obiekty
         }
@@ -40,7 +44,7 @@ namespace Generator_pytan
 
         private void Test_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();//Bezwarunkowe zamknięcie aplikacji
+           
 
         }
 
@@ -106,7 +110,7 @@ namespace Generator_pytan
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
                 Question.maxpkt = Convert.ToInt32(Question.baza_pytan_array[0, 18]);//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
-                int procenty = (wynik / Question.maxpkt)*100;
+                double procenty = (double)(wynik / Question.maxpkt)*100;
                 string ocena="0";
                 
                 if (procenty < Student_oceny.ndstDo)
@@ -128,7 +132,7 @@ namespace Generator_pytan
 
 
                 
-                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: "+ocena + "\n Procent: " + procenty);
+                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: "+ocena + "\nProcent: " + procenty);
             }
             else
             {
@@ -185,6 +189,7 @@ namespace Generator_pytan
             }
             
         }
+
 
     }
 }

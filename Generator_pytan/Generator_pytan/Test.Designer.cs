@@ -43,6 +43,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.but_nastepne_pyt = new System.Windows.Forms.Button();
             this.lab_wynik = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label_imie = new System.Windows.Forms.Label();
+            this.label_nazwisko = new System.Windows.Forms.Label();
+            this.label_grupa = new System.Windows.Forms.Label();
+            this.label_indeks = new System.Windows.Forms.Label();
             this.panel_pytan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(190, 47);
+            this.label1.Location = new System.Drawing.Point(166, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 1;
@@ -58,7 +66,7 @@
             // 
             // but_start_test
             // 
-            this.but_start_test.Location = new System.Drawing.Point(193, 492);
+            this.but_start_test.Location = new System.Drawing.Point(307, 505);
             this.but_start_test.Name = "but_start_test";
             this.but_start_test.Size = new System.Drawing.Size(141, 87);
             this.but_start_test.TabIndex = 2;
@@ -68,7 +76,7 @@
             // 
             // but_stop_test
             // 
-            this.but_stop_test.Location = new System.Drawing.Point(676, 492);
+            this.but_stop_test.Location = new System.Drawing.Point(828, 505);
             this.but_stop_test.Name = "but_stop_test";
             this.but_stop_test.Size = new System.Drawing.Size(140, 87);
             this.but_stop_test.TabIndex = 3;
@@ -86,9 +94,9 @@
             this.panel_pytan.Controls.Add(this.check_odp_1);
             this.panel_pytan.Controls.Add(this.lab_tresc_pytania);
             this.panel_pytan.Controls.Add(this.label2);
-            this.panel_pytan.Location = new System.Drawing.Point(193, 85);
+            this.panel_pytan.Location = new System.Drawing.Point(307, 85);
             this.panel_pytan.Name = "panel_pytan";
-            this.panel_pytan.Size = new System.Drawing.Size(623, 401);
+            this.panel_pytan.Size = new System.Drawing.Size(661, 401);
             this.panel_pytan.TabIndex = 4;
             this.panel_pytan.Visible = false;
             // 
@@ -96,7 +104,7 @@
             // 
             this.lab_numer_pytania.AutoSize = true;
             this.lab_numer_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lab_numer_pytania.Location = new System.Drawing.Point(524, 10);
+            this.lab_numer_pytania.Location = new System.Drawing.Point(557, 14);
             this.lab_numer_pytania.Name = "lab_numer_pytania";
             this.lab_numer_pytania.Size = new System.Drawing.Size(87, 29);
             this.lab_numer_pytania.TabIndex = 8;
@@ -169,7 +177,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 47);
+            this.label3.Location = new System.Drawing.Point(12, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 17);
             this.label3.TabIndex = 5;
@@ -177,7 +185,7 @@
             // 
             // but_nastepne_pyt
             // 
-            this.but_nastepne_pyt.Location = new System.Drawing.Point(465, 492);
+            this.but_nastepne_pyt.Location = new System.Drawing.Point(579, 505);
             this.but_nastepne_pyt.Name = "but_nastepne_pyt";
             this.but_nastepne_pyt.Size = new System.Drawing.Size(140, 87);
             this.but_nastepne_pyt.TabIndex = 6;
@@ -188,18 +196,98 @@
             // lab_wynik
             // 
             this.lab_wynik.AutoSize = true;
-            this.lab_wynik.Location = new System.Drawing.Point(60, 245);
+            this.lab_wynik.Location = new System.Drawing.Point(12, 575);
             this.lab_wynik.Name = "lab_wynik";
             this.lab_wynik.Size = new System.Drawing.Size(46, 17);
             this.lab_wynik.TabIndex = 7;
             this.lab_wynik.Text = "label4";
             this.lab_wynik.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(64, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Imie:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Nazwisko:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(49, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Grupa:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Nr Indeksu";
+            // 
+            // label_imie
+            // 
+            this.label_imie.AutoSize = true;
+            this.label_imie.Location = new System.Drawing.Point(108, 47);
+            this.label_imie.Name = "label_imie";
+            this.label_imie.Size = new System.Drawing.Size(46, 17);
+            this.label_imie.TabIndex = 12;
+            this.label_imie.Text = "label8";
+            // 
+            // label_nazwisko
+            // 
+            this.label_nazwisko.AutoSize = true;
+            this.label_nazwisko.Location = new System.Drawing.Point(108, 79);
+            this.label_nazwisko.Name = "label_nazwisko";
+            this.label_nazwisko.Size = new System.Drawing.Size(46, 17);
+            this.label_nazwisko.TabIndex = 13;
+            this.label_nazwisko.Text = "label9";
+            // 
+            // label_grupa
+            // 
+            this.label_grupa.AutoSize = true;
+            this.label_grupa.Location = new System.Drawing.Point(108, 113);
+            this.label_grupa.Name = "label_grupa";
+            this.label_grupa.Size = new System.Drawing.Size(54, 17);
+            this.label_grupa.TabIndex = 14;
+            this.label_grupa.Text = "label10";
+            // 
+            // label_indeks
+            // 
+            this.label_indeks.AutoSize = true;
+            this.label_indeks.Location = new System.Drawing.Point(108, 146);
+            this.label_indeks.Name = "label_indeks";
+            this.label_indeks.Size = new System.Drawing.Size(54, 17);
+            this.label_indeks.TabIndex = 15;
+            this.label_indeks.Text = "label11";
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 622);
+            this.ClientSize = new System.Drawing.Size(1010, 622);
+            this.Controls.Add(this.label_indeks);
+            this.Controls.Add(this.label_grupa);
+            this.Controls.Add(this.label_nazwisko);
+            this.Controls.Add(this.label_imie);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lab_wynik);
             this.Controls.Add(this.but_nastepne_pyt);
             this.Controls.Add(this.label3);
@@ -235,5 +323,13 @@
         private System.Windows.Forms.Button but_nastepne_pyt;
         private System.Windows.Forms.Label lab_numer_pytania;
         private System.Windows.Forms.Label lab_wynik;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_imie;
+        private System.Windows.Forms.Label label_nazwisko;
+        private System.Windows.Forms.Label label_grupa;
+        private System.Windows.Forms.Label label_indeks;
     }
 }

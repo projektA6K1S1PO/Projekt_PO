@@ -58,6 +58,11 @@ namespace Generator_pytan
             LogAdmin.Show();//Otworz forme logowanie
 
         }
+
+        private void Panel_wyboru_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();//Bezwarunkowe zamknięcie aplikacji
+        }
     }
     
 }

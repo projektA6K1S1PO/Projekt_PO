@@ -26,14 +26,17 @@ namespace Generator_pytan
             }
             else
             {
-                Student_oceny Student = new Student_oceny();//Stworzenie nowego studenta
 
-                Student.Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
-                Student.Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska studentowi
-                Student.Grupa = Convert.ToString(textBox_grupa.Text);//Nadanie Grupy studentowi
-                Student.Nr_indeksu = Convert.ToInt32(textBox_indeks.Text);//Nadanie numeru indeksu studentowi
+                Student_oceny.listaStudentów.Add(new Student_oceny());
 
-                this.Hide();//Zamknij forme wybor
+
+
+                Student_oceny.listaStudentów[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
+                Student_oceny.listaStudentów[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska studentowi
+                Student_oceny.listaStudentów[0].Grupa = Convert.ToString(textBox_grupa.Text);//Nadanie Grupy studentowi
+                Student_oceny.listaStudentów[0].Nr_indeksu = Convert.ToString(textBox_indeks.Text);//Nadanie numeru indeksu studentowi
+
+                this.Hide();//Zamknij forme 
                 Test Test = new Test();
                 Test.Show();//Otworz forme test
 
@@ -44,7 +47,9 @@ namespace Generator_pytan
 
         private void Student_dane_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();//Bezwarunkowe zamknięcie aplikacji
+            this.Hide();//Zamknij forme 
+            Panel_wyboru Panel_wyboru = new Panel_wyboru();
+            Panel_wyboru.Show();//Otworz forme test
         }
     }
 }

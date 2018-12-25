@@ -33,7 +33,7 @@
             this.haslo_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_powrot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -78,29 +78,29 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Hasło";
             // 
-            // button2
+            // button_powrot
             // 
-            this.button2.Location = new System.Drawing.Point(69, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 36);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Powrót";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_powrot.Location = new System.Drawing.Point(69, 109);
+            this.button_powrot.Name = "button_powrot";
+            this.button_powrot.Size = new System.Drawing.Size(93, 36);
+            this.button_powrot.TabIndex = 5;
+            this.button_powrot.Text = "Powrót";
+            this.button_powrot.UseVisualStyleBackColor = true;
+            this.button_powrot.Click += new System.EventHandler(this.button2_Click);
             // 
-            // LogAdmin
+            // Logowanie_administratora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 168);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_powrot);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.haslo_box);
             this.Controls.Add(this.login_box);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "LogAdmin";
+            this.Name = "Logowanie_administratora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie Administrator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogAdmin_FormClosing);
@@ -117,6 +117,6 @@
         private System.Windows.Forms.TextBox haslo_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_powrot;
     }
 }

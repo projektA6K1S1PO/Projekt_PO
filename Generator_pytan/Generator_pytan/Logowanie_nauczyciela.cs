@@ -49,7 +49,8 @@ namespace Generator_pytan
 
         }
 
-        private void Logowanie_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void Logowanie_nauczyciela_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();//Bezwarunkowe zamknięcie aplikacji
         }
