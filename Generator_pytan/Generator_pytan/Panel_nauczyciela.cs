@@ -20,6 +20,9 @@ namespace Generator_pytan
         public Panel_nauczyciela()
         {
             InitializeComponent();
+            Student_oceny.ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
+            Student_oceny.dstDo = Convert.ToInt16(dostatecznyDo.Text);
+            Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,10 +83,12 @@ namespace Generator_pytan
         }
 
         private void widelki_Click(object sender, EventArgs e)
-        {        
+        {
+
             Student_oceny.ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
             Student_oceny.dstDo = Convert.ToInt16(dostatecznyDo.Text);
             Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
+
             MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
 
         }

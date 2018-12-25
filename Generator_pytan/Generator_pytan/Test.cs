@@ -41,15 +41,7 @@ namespace Generator_pytan
         private void Test_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();//Bezwarunkowe zamknięcie aplikacji
-           //Należy dodać czy napewno użytkownik chce zamknąć aplikację i stracić wynik testu
 
-            DialogResult result;
-
-            result = MessageBox.Show("Czy napewno chcesz zakończyć test i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
         }
 
         private void start_test_Click_1(object sender, EventArgs e)

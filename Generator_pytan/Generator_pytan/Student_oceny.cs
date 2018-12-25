@@ -12,7 +12,7 @@ namespace Generator_pytan
         public String Imie { get; set; }
         public String Nazwisko { get; set; }
         public int Nr_indeksu { get; set; }
-        public int Grupa { get; set; }
+        public String Grupa { get; set; }
 
         //Zmienne do widełek ocen
         public static int ndstDo;

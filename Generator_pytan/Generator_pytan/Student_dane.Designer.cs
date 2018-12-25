@@ -129,7 +129,9 @@
             this.Controls.Add(this.textBox_indeks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Student_dane";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student dane";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Student_dane_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
