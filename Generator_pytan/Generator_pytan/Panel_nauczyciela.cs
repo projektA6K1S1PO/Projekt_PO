@@ -24,19 +24,12 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             if (openFileDialog1.ShowDialog() == DialogResult.OK)//Prawidlowo otwarty plik
             {
                 filePath = openFileDialog1.FileName;//Wyłuskanie sciezki do pliku z pytaniami
                 Question.baza_pytan_array = LoadCsv(filePath); // Pobierz danę z pliku do tablicy
                 label2.Text = Question.baza_pytan_array[0, 0];//Wyświetl nazwę zestawu dla użytkownika
             }
-
-           
-            
-            
-
         }
 
 
@@ -87,20 +80,13 @@ namespace Generator_pytan
         }
 
         private void widelki_Click(object sender, EventArgs e)
-        {
-            // niby wszystko ok ale tu wartosci poprawne a po przeniesieniu do Testu wynosza 0 :( 
-            
-                int ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
-                int dstDo = Convert.ToInt16(dostatecznyDo.Text);
-                int dbDo = Convert.ToInt16(dobryDo.Text);
-            MessageBox.Show(ndstDo + "\n" + dstDo + "\n" + dbDo);
+        {        
+            Student_oceny.ndstDo = Convert.ToInt16(niedostatecznyDo.Text);
+            Student_oceny.dstDo = Convert.ToInt16(dostatecznyDo.Text);
+            Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
+            MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
 
         }
-
-            public static int ndstDo = ndstDo;
-            public static int dstDo = dstDo;
-            public static int dbDo = dbDo;
-
     }
 
 }

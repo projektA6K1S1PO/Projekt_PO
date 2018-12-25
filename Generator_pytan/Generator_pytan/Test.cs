@@ -58,15 +58,6 @@ namespace Generator_pytan
             //losowanie();//Tutaj musi następować funkcja losowania
             panel_pytan.Visible = true;//Pokaż panel pytań
             but_start_test.Visible = false;//Wyłącz przycisk rozpoczęcie testu
-            label4.Visible = false;
-            label5.Visible = false;
-            label6.Visible = false;
-            label7.Visible = false;
-            textBox1.Visible = false;
-            textBox2.Visible = false;
-            textBox3.Visible = false;
-            textBox4.Visible = false;
-
             wyswietlaj_pytanie();//Wyświetlaj pierwsze pytanie żeby nie było pustych labelek
         }
 
@@ -126,19 +117,19 @@ namespace Generator_pytan
                 int procenty = (wynik / Question.maxpkt)*100;
                 string ocena="0";
                 
-                if (procenty < Panel_nauczyciela.ndstDo)
+                if (procenty < Student_oceny.ndstDo)
                     {
                     ocena = "2";
                      }
-                else if (procenty >= Panel_nauczyciela.ndstDo && procenty < Panel_nauczyciela.dstDo)
+                else if (procenty >= Student_oceny.ndstDo && procenty < Student_oceny.dstDo)
                    {
                     ocena = "3";
                     }
-                else if (procenty >= Panel_nauczyciela.dstDo && procenty < Panel_nauczyciela.dbDo)
+                else if (procenty >= Student_oceny.dstDo && procenty < Student_oceny.dbDo)
                     {
                     ocena = "4";
                        }
-                else if (procenty >= Panel_nauczyciela.dbDo)
+                else if (procenty >= Student_oceny.dbDo)
                     {
                     ocena = "5";
                     }
@@ -203,29 +194,5 @@ namespace Generator_pytan
             
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lab_wynik_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
