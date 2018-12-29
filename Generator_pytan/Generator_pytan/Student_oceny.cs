@@ -16,9 +16,14 @@ namespace Generator_pytan
 
         public static List<Student_oceny> listaStudentów = new List<Student_oceny>();//Utworzenie nowej listy pytań
 
+       
         //Zmienne do widełek ocen
         public static int ndstDo;
         public static int dstDo;
         public static int dbDo;
+        // Zmienne przydatne
+        public static double procenty;
+        public static string nazwa;
+
     }
 }

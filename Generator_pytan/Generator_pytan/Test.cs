@@ -111,30 +111,35 @@ namespace Generator_pytan
             numer_pytania++;//Przejdz do następnego pytania
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
             {
+                
                 Question.maxpkt = Convert.ToInt32(Question.baza_pytan_array[0, 18]);//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
-                double procenty = (double)(wynik / Question.maxpkt)*100;
+                Student_oceny.procenty = (double)(wynik / Question.maxpkt)*100;
                 string ocena="0";
                 
-                if (procenty < Student_oceny.ndstDo)
+                if (Student_oceny.procenty < Student_oceny.ndstDo)
                     {
                     ocena = "2";
                      }
-                else if (procenty >= Student_oceny.ndstDo && procenty < Student_oceny.dstDo)
+                else if (Student_oceny.procenty >= Student_oceny.ndstDo && Student_oceny.procenty < Student_oceny.dstDo)
                    {
                     ocena = "3";
                     }
-                else if (procenty >= Student_oceny.dstDo && procenty < Student_oceny.dbDo)
+                else if (Student_oceny.procenty >= Student_oceny.dstDo && Student_oceny.procenty < Student_oceny.dbDo)
                     {
                     ocena = "4";
                        }
-                else if (procenty >= Student_oceny.dbDo)
+                else if (Student_oceny.procenty >= Student_oceny.dbDo)
                     {
                     ocena = "5";
                     }
+                //Tworzenie pliku i zapis wynikow
+                //using (StreamWriter streamW = new StreamWriter(("f:/" + Student_oceny.nazwa + ".txt"), true))
+                //{
+                //    streamW.WriteLine(Student_oceny.listaStudentów[0].Imie + "  "+ Student_oceny.procenty);
 
+                //}
 
-                
-                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: "+ocena + "\nProcent: " + procenty);
+                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: "+ocena + "\nProcent: " + Student_oceny.procenty);
             }
             else
             {
@@ -190,7 +195,11 @@ namespace Generator_pytan
             {
                 this.Close();
             }
+            using (StreamWriter streamW = new StreamWriter(("f:/" + Student_oceny.nazwa + ".txt"), true))
+            {
+                streamW.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  "+Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.procenty);
 
+            }
             if (!Directory.Exists("C:\\Wyniki.txt"))
             {
                 Directory.CreateDirectory("C:\\Wyniki.txt");

@@ -206,11 +206,11 @@
             // 
             // widelki
             // 
-            this.widelki.Location = new System.Drawing.Point(329, 199);
+            this.widelki.Location = new System.Drawing.Point(406, 154);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;
-            this.widelki.Text = "zapisz widełki i nazwe pliku ";
+            this.widelki.Text = "zapisz widełki i nazwe pliku";
             this.widelki.UseVisualStyleBackColor = true;
             this.widelki.Click += new System.EventHandler(this.widelki_Click);
             // 

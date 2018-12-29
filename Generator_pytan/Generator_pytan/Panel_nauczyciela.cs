@@ -90,14 +90,21 @@ namespace Generator_pytan
             Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
 
             MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
-            string nazwa = Convert.ToString(nazwaPliku.Text);
+
+            Student_oceny.nazwa = Convert.ToString(nazwaPliku.Text);
+
             
 
-            using (StreamWriter streamW = new StreamWriter(("f:/"+nazwa+".txt"), true))
-            {
-                streamW.WriteLine("cos");
-                }
 
+            //string procenty = Convert.ToString(Student_oceny.procenty);
+            //MessageBox.Show(procenty);
+
+            //using (StreamWriter streamW = new StreamWriter(("f:/"+nazwa+".txt"), true))
+            //{
+            //    streamW.WriteLine(Student_oceny.procenty);
+
+            //}
+            
 
 
         }
