@@ -90,12 +90,31 @@ namespace Generator_pytan
             Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
 
             MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
+            string nazwa = Convert.ToString(nazwaPliku.Text);
+            
+
+            using (StreamWriter streamW = new StreamWriter(("f:/"+nazwa+".txt"), true))
+            {
+                streamW.WriteLine("cos");
+                }
+
+
 
         }
 
         private void Panel_nauczyciela_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();//Bezwarunkowe zamknięcie aplikacji
+        }
+
+        private void nazwaPliku_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void niedostatecznyDo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

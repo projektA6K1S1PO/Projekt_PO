@@ -48,6 +48,8 @@
             this.widelki = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nazwaPliku = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -108,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 139);
+            this.label3.Location = new System.Drawing.Point(12, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 17);
             this.label3.TabIndex = 5;
@@ -117,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 168);
+            this.label4.Location = new System.Drawing.Point(12, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 17);
             this.label4.TabIndex = 6;
@@ -126,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 197);
+            this.label5.Location = new System.Drawing.Point(12, 231);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 17);
             this.label5.TabIndex = 7;
@@ -135,7 +137,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 226);
+            this.label6.Location = new System.Drawing.Point(12, 260);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 17);
             this.label6.TabIndex = 8;
@@ -144,7 +146,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(143, 168);
+            this.label12.Location = new System.Drawing.Point(127, 202);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 17);
             this.label12.TabIndex = 14;
@@ -152,15 +154,16 @@
             // 
             // niedostatecznyDo
             // 
-            this.niedostatecznyDo.Location = new System.Drawing.Point(193, 167);
+            this.niedostatecznyDo.Location = new System.Drawing.Point(177, 201);
             this.niedostatecznyDo.Name = "niedostatecznyDo";
             this.niedostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.niedostatecznyDo.TabIndex = 22;
             this.niedostatecznyDo.Text = "40";
+            this.niedostatecznyDo.TextChanged += new System.EventHandler(this.niedostatecznyDo_TextChanged);
             // 
             // dostatecznyDo
             // 
-            this.dostatecznyDo.Location = new System.Drawing.Point(193, 197);
+            this.dostatecznyDo.Location = new System.Drawing.Point(177, 231);
             this.dostatecznyDo.Name = "dostatecznyDo";
             this.dostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.dostatecznyDo.TabIndex = 23;
@@ -168,7 +171,7 @@
             // 
             // dobryDo
             // 
-            this.dobryDo.Location = new System.Drawing.Point(193, 223);
+            this.dobryDo.Location = new System.Drawing.Point(177, 257);
             this.dobryDo.Name = "dobryDo";
             this.dobryDo.Size = new System.Drawing.Size(55, 22);
             this.dobryDo.TabIndex = 24;
@@ -177,7 +180,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(254, 167);
+            this.label16.Location = new System.Drawing.Point(238, 201);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(24, 17);
             this.label16.TabIndex = 26;
@@ -186,7 +189,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(254, 197);
+            this.label17.Location = new System.Drawing.Point(238, 231);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(24, 17);
             this.label17.TabIndex = 27;
@@ -195,7 +198,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(254, 226);
+            this.label18.Location = new System.Drawing.Point(238, 260);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(24, 17);
             this.label18.TabIndex = 28;
@@ -203,18 +206,18 @@
             // 
             // widelki
             // 
-            this.widelki.Location = new System.Drawing.Point(345, 165);
+            this.widelki.Location = new System.Drawing.Point(329, 199);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;
-            this.widelki.Text = "zapisz widełki";
+            this.widelki.Text = "zapisz widełki i nazwe pliku ";
             this.widelki.UseVisualStyleBackColor = true;
             this.widelki.Click += new System.EventHandler(this.widelki_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(163, 197);
+            this.label8.Location = new System.Drawing.Point(147, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(24, 17);
             this.label8.TabIndex = 31;
@@ -223,17 +226,36 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(163, 226);
+            this.label9.Location = new System.Drawing.Point(147, 260);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(24, 17);
             this.label9.TabIndex = 32;
             this.label9.Text = "do";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 134);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 17);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Wyniki zapisz do pliku:";
+            // 
+            // nazwaPliku
+            // 
+            this.nazwaPliku.Location = new System.Drawing.Point(169, 131);
+            this.nazwaPliku.Name = "nazwaPliku";
+            this.nazwaPliku.Size = new System.Drawing.Size(187, 22);
+            this.nazwaPliku.TabIndex = 34;
+            this.nazwaPliku.TextChanged += new System.EventHandler(this.nazwaPliku_TextChanged);
+            // 
             // Panel_nauczyciela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 270);
+            this.ClientSize = new System.Drawing.Size(582, 303);
+            this.Controls.Add(this.nazwaPliku);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.widelki);
@@ -286,5 +308,7 @@
         private System.Windows.Forms.Button widelki;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox nazwaPliku;
     }
 }

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.IO;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Generator_pytan
 {
@@ -181,13 +183,21 @@ namespace Generator_pytan
         private void but_stop_test_Click(object sender, EventArgs e)
         {
             DialogResult result;
+                                          
 
             result = MessageBox.Show("Czy napewno chcesz zakończyć test i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 this.Close();
             }
-            
+
+            if (!Directory.Exists("C:\\Wyniki.txt"))
+            {
+                Directory.CreateDirectory("C:\\Wyniki.txt");
+            }
+
+
+
         }
 
 
