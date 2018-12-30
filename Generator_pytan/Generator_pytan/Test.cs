@@ -15,11 +15,11 @@ namespace Generator_pytan
     public partial class Test : Form
     {
 
-        public static int numer_pytania=0;//Zmienna lokalna,testowa numer aktualnie 
+        public static int numer_pytania = 0;//Zmienna lokalna,testowa numer aktualnie 
         //wyświetlanego pytania (numer bezwzględny nawet przy losowych pytaniach
         public static int wynik = 0;//Zmienna przechowująca wynik testu
-        
-        
+
+
 
         public Test()
         {
@@ -28,13 +28,13 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Test_Load(object sender, EventArgs e)
         {
-            label1.Text = Question.baza_pytan_array[0,0];//Pokaż nazwę zestawu
-            label_imie.Text= Student_oceny.listaStudentów[0].Imie;//Pokaż dane studenta
+            label1.Text = Question.baza_pytan_array[0, 0];//Pokaż nazwę zestawu
+            label_imie.Text = Student_oceny.listaStudentów[0].Imie;//Pokaż dane studenta
             label_nazwisko.Text = Student_oceny.listaStudentów[0].Nazwisko;//Pokaż dane studenta
             label_grupa.Text = Student_oceny.listaStudentów[0].Grupa;//Pokaż dane studenta
             label_indeks.Text = Student_oceny.listaStudentów[0].Nr_indeksu;//Pokaż dane studenta
@@ -46,7 +46,7 @@ namespace Generator_pytan
 
         private void Test_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+
 
         }
 
@@ -62,15 +62,15 @@ namespace Generator_pytan
         private void wyswietlaj_pytanie()
         {
             //Obsługa kontrolek okienka test
-            lab_tresc_pytania.Text =    Question.listaPytan[numer_pytania].tresc;//Wyświetl treść pytania
-            lab_numer_pytania.Text =    Convert.ToString(numer_pytania+1);//Wyświetl numer pytania z kolei
-            check_odp_1.Text=           Question.listaPytan[numer_pytania].odp_1;//Wyświetlaj kolejno treści odpowiedzi
-            check_odp_2.Text =          Question.listaPytan[numer_pytania].odp_2;
-            check_odp_3.Text =          Question.listaPytan[numer_pytania].odp_3;
-            check_odp_4.Text =          Question.listaPytan[numer_pytania].odp_4;
-            check_odp_5.Text =          Question.listaPytan[numer_pytania].odp_5;
+            lab_tresc_pytania.Text = Question.listaPytan[numer_pytania].tresc;//Wyświetl treść pytania
+            lab_numer_pytania.Text = Convert.ToString(numer_pytania + 1);//Wyświetl numer pytania z kolei
+            check_odp_1.Text = Question.listaPytan[numer_pytania].odp_1;//Wyświetlaj kolejno treści odpowiedzi
+            check_odp_2.Text = Question.listaPytan[numer_pytania].odp_2;
+            check_odp_3.Text = Question.listaPytan[numer_pytania].odp_3;
+            check_odp_4.Text = Question.listaPytan[numer_pytania].odp_4;
+            check_odp_5.Text = Question.listaPytan[numer_pytania].odp_5;
             lab_wynik.Text = Convert.ToString(wynik);//Pokaż wynik dla testu (ukryte na form)
-            
+
         }
 
         //Funkcja generująca obiekty klasy Question
@@ -87,17 +87,17 @@ namespace Generator_pytan
         {
             for (int numer_pytania = 0; numer_pytania < Convert.ToInt16(Question.baza_pytan_array[0, 2]); numer_pytania++)
             {
-                Question.listaPytan[numer_pytania].tresc = Question.baza_pytan_array[numer_pytania+2, 1];
-                Question.listaPytan[numer_pytania].odp_1 = Question.baza_pytan_array[numer_pytania+2, 3];
-                Question.listaPytan[numer_pytania].odp_2 = Question.baza_pytan_array[numer_pytania+2, 4];
-                Question.listaPytan[numer_pytania].odp_3 = Question.baza_pytan_array[numer_pytania+2, 5];
-                Question.listaPytan[numer_pytania].odp_4 = Question.baza_pytan_array[numer_pytania+2, 6];
-                Question.listaPytan[numer_pytania].odp_5 = Question.baza_pytan_array[numer_pytania+2, 7];
-                Question.listaPytan[numer_pytania].odp_1_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania+2, 8]);
-                Question.listaPytan[numer_pytania].odp_2_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania+2, 9]);
-                Question.listaPytan[numer_pytania].odp_3_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania+2, 10]);
-                Question.listaPytan[numer_pytania].odp_4_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania+2, 11]);
-                Question.listaPytan[numer_pytania].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania+2, 12]);
+                Question.listaPytan[numer_pytania].tresc = Question.baza_pytan_array[numer_pytania + 2, 1];
+                Question.listaPytan[numer_pytania].odp_1 = Question.baza_pytan_array[numer_pytania + 2, 3];
+                Question.listaPytan[numer_pytania].odp_2 = Question.baza_pytan_array[numer_pytania + 2, 4];
+                Question.listaPytan[numer_pytania].odp_3 = Question.baza_pytan_array[numer_pytania + 2, 5];
+                Question.listaPytan[numer_pytania].odp_4 = Question.baza_pytan_array[numer_pytania + 2, 6];
+                Question.listaPytan[numer_pytania].odp_5 = Question.baza_pytan_array[numer_pytania + 2, 7];
+                Question.listaPytan[numer_pytania].odp_1_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 8]);
+                Question.listaPytan[numer_pytania].odp_2_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 9]);
+                Question.listaPytan[numer_pytania].odp_3_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 10]);
+                Question.listaPytan[numer_pytania].odp_4_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 11]);
+                Question.listaPytan[numer_pytania].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 12]);
                 //Obsługa kolejnych elementów 
             }
 
@@ -105,33 +105,33 @@ namespace Generator_pytan
         //int maxodp= Convert.ToInt16(Question.baza_pytan_array[2, 19]); myślałem ze jakoś tak Piotrek 
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
-            
+
             sprawdz_odp();//Sprawdz poprawność odp dodaj punkty do wyniku
             zeruj_odp();//Zeruj zaznaczenia checkboxów
             numer_pytania++;//Przejdz do następnego pytania
-            if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2]))-1)//Jeżeli koniec testu
+            if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 1)//Jeżeli koniec testu
             {
-                
+
                 Question.maxpkt = Convert.ToInt32(Question.baza_pytan_array[0, 18]);//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
-                Student_oceny.procenty = (double)(wynik / Question.maxpkt)*100;
-                string ocena="0";
-                
+                Student_oceny.procenty = (double)(wynik / Question.maxpkt) * 100;
+                string ocena = "0";
+
                 if (Student_oceny.procenty < Student_oceny.ndstDo)
-                    {
+                {
                     ocena = "2";
-                     }
+                }
                 else if (Student_oceny.procenty >= Student_oceny.ndstDo && Student_oceny.procenty < Student_oceny.dstDo)
-                   {
+                {
                     ocena = "3";
-                    }
+                }
                 else if (Student_oceny.procenty >= Student_oceny.dstDo && Student_oceny.procenty < Student_oceny.dbDo)
-                    {
+                {
                     ocena = "4";
-                       }
+                }
                 else if (Student_oceny.procenty >= Student_oceny.dbDo)
-                    {
+                {
                     ocena = "5";
-                    }
+                }
                 //Tworzenie pliku i zapis wynikow
                 //using (StreamWriter streamW = new StreamWriter(("f:/" + Student_oceny.nazwa + ".txt"), true))
                 //{
@@ -139,14 +139,14 @@ namespace Generator_pytan
 
                 //}
 
-                MessageBox.Show("Koniec Testu \nTwój wynik to: "+wynik+ " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: "+ocena + "\nProcent: " + Student_oceny.procenty);
+                MessageBox.Show("Koniec Testu \nTwój wynik to: " + wynik + " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: " + ocena + "\nProcent: " + Student_oceny.procenty);
             }
             else
             {
                 wyswietlaj_pytanie();
             }
-            
-            
+
+
         }
 
         //Funkcja sprawdzająca odp na pytania
@@ -188,27 +188,30 @@ namespace Generator_pytan
         private void but_stop_test_Click(object sender, EventArgs e)
         {
             DialogResult result;
-                                          
+
 
             result = MessageBox.Show("Czy napewno chcesz zakończyć test i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 this.Close();
             }
-            using (StreamWriter streamW = new StreamWriter(("f:/" + Student_oceny.nazwa + ".txt"), true))
+
+            // tu własnie nie dziala przeniesienie folderu 
+            using (StreamWriter streamW = new StreamWriter((Panel_nauczyciela.folderZapisu + Student_oceny.nazwa + ".txt"), true))
             {
-                streamW.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  "+Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.procenty);
+                streamW.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  " + Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.procenty);
+
+                //}
+                //if (!Directory.Exists("C:\\Wyniki.txt"))
+                //{
+                //    Directory.CreateDirectory("C:\\Wyniki.txt");
+                //}
+
+
 
             }
-            if (!Directory.Exists("C:\\Wyniki.txt"))
-            {
-                Directory.CreateDirectory("C:\\Wyniki.txt");
-            }
-
 
 
         }
-
-
     }
 }

@@ -16,7 +16,7 @@ namespace Generator_pytan
     {
 
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
-
+        public static string folderZapisu = null;
         public Panel_nauczyciela()
         {
             InitializeComponent();
@@ -91,7 +91,7 @@ namespace Generator_pytan
 
             MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
 
-            Student_oceny.nazwa = Convert.ToString(nazwaPliku.Text);
+           // Student_oceny.nazwa = Convert.ToString(nazwaPliku.Text);
 
             
 
@@ -138,6 +138,28 @@ namespace Generator_pytan
                     }
                 }
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Student_oceny.nazwa = Convert.ToString(nazwaPliku.Text);
+            Stream myStream;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if ((myStream = saveFileDialog1.OpenFile()) != null)
+                {// tu jest problem nie wiem jak przeniesc ten wybrany folder do klasy test przycisk zapisz
+                    folderZapisu = Convert.ToString(saveFileDialog1.OpenFile());// to nie działa
+                    myStream.Close();
+                }
+            }
+
+
         }
     }
 

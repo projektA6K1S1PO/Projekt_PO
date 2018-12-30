@@ -52,6 +52,7 @@
             this.nazwaPliku = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Wyniki = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -102,7 +103,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(524, 91);
+            this.button3.Location = new System.Drawing.Point(53, 392);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 60);
             this.button3.TabIndex = 4;
@@ -209,7 +210,7 @@
             // 
             // widelki
             // 
-            this.widelki.Location = new System.Drawing.Point(306, 159);
+            this.widelki.Location = new System.Drawing.Point(306, 219);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;
@@ -255,7 +256,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(495, 34);
+            this.label10.Location = new System.Drawing.Point(24, 335);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 17);
             this.label10.TabIndex = 35;
@@ -263,16 +264,27 @@
             // 
             // Wyniki
             // 
-            this.Wyniki.Location = new System.Drawing.Point(474, 62);
+            this.Wyniki.Location = new System.Drawing.Point(3, 363);
             this.Wyniki.Name = "Wyniki";
             this.Wyniki.Size = new System.Drawing.Size(187, 22);
             this.Wyniki.TabIndex = 36;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(371, 126);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(227, 33);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "Wybirze miejsce zapisania pliku";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Panel_nauczyciela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 373);
+            this.ClientSize = new System.Drawing.Size(629, 456);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.Wyniki);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.nazwaPliku);
@@ -333,5 +345,6 @@
         private System.Windows.Forms.TextBox nazwaPliku;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Wyniki;
+        private System.Windows.Forms.Button button4;
     }
 }
