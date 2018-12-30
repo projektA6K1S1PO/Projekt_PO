@@ -123,6 +123,22 @@ namespace Generator_pytan
         {
 
         }
+        // F:\
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string PlikWyniki = Convert.ToString(Wyniki.Text);
+
+            
+                using (StreamReader StreamR = new StreamReader("F:/" + PlikWyniki+".txt")) 
+                {
+                    string linijka;
+                    while ((linijka = StreamR.ReadLine()) != null)
+                    {
+                        Console.WriteLine(linijka);
+                    }
+                }
+            
+        }
     }
 
 }
