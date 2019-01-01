@@ -34,12 +34,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox_imie = new System.Windows.Forms.TextBox();
+            this.textBox_nazwisko = new System.Windows.Forms.TextBox();
+            this.textBox_stopien = new System.Windows.Forms.TextBox();
+            this.textBox_przedmiot = new System.Windows.Forms.TextBox();
+            this.textBox_login = new System.Windows.Forms.TextBox();
+            this.textBox_haslo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -99,48 +99,49 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Hasło";
             // 
-            // textBox1
+            // textBox_imie
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 22);
-            this.textBox1.TabIndex = 6;
+            this.textBox_imie.Location = new System.Drawing.Point(176, 37);
+            this.textBox_imie.Name = "textBox_imie";
+            this.textBox_imie.Size = new System.Drawing.Size(211, 22);
+            this.textBox_imie.TabIndex = 6;
+            this.textBox_imie.TextChanged += new System.EventHandler(this.imie_TextChanged);
             // 
-            // textBox2
+            // textBox_nazwisko
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 22);
-            this.textBox2.TabIndex = 7;
+            this.textBox_nazwisko.Location = new System.Drawing.Point(176, 69);
+            this.textBox_nazwisko.Name = "textBox_nazwisko";
+            this.textBox_nazwisko.Size = new System.Drawing.Size(211, 22);
+            this.textBox_nazwisko.TabIndex = 7;
             // 
-            // textBox3
+            // textBox_stopien
             // 
-            this.textBox3.Location = new System.Drawing.Point(176, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 22);
-            this.textBox3.TabIndex = 8;
+            this.textBox_stopien.Location = new System.Drawing.Point(176, 104);
+            this.textBox_stopien.Name = "textBox_stopien";
+            this.textBox_stopien.Size = new System.Drawing.Size(211, 22);
+            this.textBox_stopien.TabIndex = 8;
             // 
-            // textBox4
+            // textBox_przedmiot
             // 
-            this.textBox4.Location = new System.Drawing.Point(176, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 22);
-            this.textBox4.TabIndex = 9;
+            this.textBox_przedmiot.Location = new System.Drawing.Point(176, 135);
+            this.textBox_przedmiot.Name = "textBox_przedmiot";
+            this.textBox_przedmiot.Size = new System.Drawing.Size(211, 22);
+            this.textBox_przedmiot.TabIndex = 9;
             // 
-            // textBox5
+            // textBox_login
             // 
-            this.textBox5.Location = new System.Drawing.Point(176, 170);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(211, 22);
-            this.textBox5.TabIndex = 10;
+            this.textBox_login.Location = new System.Drawing.Point(176, 170);
+            this.textBox_login.Name = "textBox_login";
+            this.textBox_login.Size = new System.Drawing.Size(211, 22);
+            this.textBox_login.TabIndex = 10;
             // 
-            // textBox6
+            // textBox_haslo
             // 
-            this.textBox6.Location = new System.Drawing.Point(176, 201);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(211, 22);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBox_haslo.Location = new System.Drawing.Point(176, 201);
+            this.textBox_haslo.Name = "textBox_haslo";
+            this.textBox_haslo.Size = new System.Drawing.Size(211, 22);
+            this.textBox_haslo.TabIndex = 11;
+            this.textBox_haslo.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button1
             // 
@@ -168,12 +169,12 @@
             this.ClientSize = new System.Drawing.Size(458, 337);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_haslo);
+            this.Controls.Add(this.textBox_login);
+            this.Controls.Add(this.textBox_przedmiot);
+            this.Controls.Add(this.textBox_stopien);
+            this.Controls.Add(this.textBox_nazwisko);
+            this.Controls.Add(this.textBox_imie);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -195,12 +196,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox_imie;
+        private System.Windows.Forms.TextBox textBox_nazwisko;
+        private System.Windows.Forms.TextBox textBox_stopien;
+        private System.Windows.Forms.TextBox textBox_przedmiot;
+        private System.Windows.Forms.TextBox textBox_login;
+        private System.Windows.Forms.TextBox textBox_haslo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
     }
