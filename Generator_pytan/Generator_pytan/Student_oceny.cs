@@ -23,7 +23,8 @@ namespace Generator_pytan
         public static int dbDo;
         // Zmienne przydatne
         public static double procenty;
-        public static string nazwa;
+        public static string nazwa_pliku;
+
 
     }
 }

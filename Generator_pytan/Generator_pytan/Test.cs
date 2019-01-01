@@ -26,10 +26,6 @@ namespace Generator_pytan
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Test_Load(object sender, EventArgs e)
         {
@@ -46,7 +42,7 @@ namespace Generator_pytan
 
         private void Test_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+           Application.Exit();
 
         }
 
@@ -54,14 +50,17 @@ namespace Generator_pytan
         {
 
             //losowanie();//Tutaj musi następować funkcja losowania
+            numer_pytania = 0;
             panel_pytan.Visible = true;//Pokaż panel pytań
             but_start_test.Visible = false;//Wyłącz przycisk rozpoczęcie testu
+            but_nastepne_pyt.Visible = true;
             wyswietlaj_pytanie();//Wyświetlaj pierwsze pytanie żeby nie było pustych labelek
         }
 
         private void wyswietlaj_pytanie()
         {
             //Obsługa kontrolek okienka test
+
             lab_tresc_pytania.Text = Question.listaPytan[numer_pytania].tresc;//Wyświetl treść pytania
             lab_numer_pytania.Text = Convert.ToString(numer_pytania + 1);//Wyświetl numer pytania z kolei
             check_odp_1.Text = Question.listaPytan[numer_pytania].odp_1;//Wyświetlaj kolejno treści odpowiedzi
@@ -102,16 +101,22 @@ namespace Generator_pytan
             }
 
         }
-        //int maxodp= Convert.ToInt16(Question.baza_pytan_array[2, 19]); myślałem ze jakoś tak Piotrek 
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
 
             sprawdz_odp();//Sprawdz poprawność odp dodaj punkty do wyniku
             zeruj_odp();//Zeruj zaznaczenia checkboxów
             numer_pytania++;//Przejdz do następnego pytania
+            if ((numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 2))
+            {
+                but_nastepne_pyt.Text = "Zakończ test i zapisz wynik";
+                but_stop_test.Visible = false;
+            }
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 1)//Jeżeli koniec testu
             {
-
+                but_nastepne_pyt.Visible = false;
+                panel_pytan.Visible = false;
+                
                 Question.maxpkt = Convert.ToInt32(Question.baza_pytan_array[0, 18]);//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
                 Student_oceny.procenty = (double)(wynik / Question.maxpkt) * 100;
                 string ocena = "0";
@@ -132,14 +137,32 @@ namespace Generator_pytan
                 {
                     ocena = "5";
                 }
-                //Tworzenie pliku i zapis wynikow
-                //using (StreamWriter streamW = new StreamWriter(("f:/" + Student_oceny.nazwa + ".txt"), true))
-                //{
-                //    streamW.WriteLine(Student_oceny.listaStudentów[0].Imie + "  "+ Student_oceny.procenty);
 
-                //}
+                DialogResult result;
 
-                MessageBox.Show("Koniec Testu \nTwój wynik to: " + wynik + " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: " + ocena + "\nProcent: " + Student_oceny.procenty);
+                result = MessageBox.Show("Koniec Testu \nTwój wynik to: " + wynik + " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: " + ocena + "\nProcent: " + Student_oceny.procenty,"Koniec Testu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    if (File.Exists(Panel_nauczyciela.folderZapisu))
+                    {
+                        using (StreamWriter sw = File.AppendText(Panel_nauczyciela.folderZapisu))
+                        {
+
+                            sw.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  " + Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.listaStudentów[0].Grupa + "  " + Student_oceny.listaStudentów[0].Nr_indeksu + "   Ocena:" + ocena);
+                            sw.Close();
+                        }
+                    }
+
+                    this.Hide();//Zamknij forme 
+
+                    Panel_wyboru Panel_wyboru = new Panel_wyboru();
+                    Panel_wyboru.Show();//Otworz forme test
+
+                    //Application.Exit();
+                    //this.Close();
+                }
+
+
             }
             else
             {
@@ -189,28 +212,11 @@ namespace Generator_pytan
         {
             DialogResult result;
 
-
-            result = MessageBox.Show("Czy napewno chcesz zakończyć test i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            result = MessageBox.Show("Czy napewno chcesz zakończyć test bez zapisu wyniku i opuścić aplikację", "UWAGA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 this.Close();
             }
-
-            // tu własnie nie dziala przeniesienie folderu 
-            using (StreamWriter streamW = new StreamWriter((Panel_nauczyciela.folderZapisu + Student_oceny.nazwa + ".txt"), true))
-            {
-                streamW.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  " + Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.procenty);
-
-                //}
-                //if (!Directory.Exists("C:\\Wyniki.txt"))
-                //{
-                //    Directory.CreateDirectory("C:\\Wyniki.txt");
-                //}
-
-
-
-            }
-
 
         }
     }

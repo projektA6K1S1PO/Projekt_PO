@@ -28,7 +28,7 @@ namespace Generator_pytan
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (!(Panel_nauczyciela.filePath == null))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
+            if ( (!(Panel_nauczyciela.filePath == null)) && (!(Panel_nauczyciela.folderZapisu == null)))//Jesli brak sciezki do pliku z pyt to nie pozwol na rozpoczecie testu
             {
                 this.Hide();//Zamknij forme wybor
                 Student_dane Student_dane = new Student_dane();
@@ -37,7 +37,7 @@ namespace Generator_pytan
             else
             {
 
-                MessageBox.Show("Administrator nie wczytał zestawu pytań", "Błąd Pliku", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Administrator nie wczytał zestawu pytań i/lub ścieżki do zapisu wyników", "Błąd Pliku", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 

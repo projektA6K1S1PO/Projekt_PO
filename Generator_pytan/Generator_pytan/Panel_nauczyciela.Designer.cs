@@ -33,7 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,8 +49,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.nazwaPliku = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Wyniki = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -100,16 +97,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(53, 392);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Wyniki studentów";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -163,7 +150,6 @@
             this.niedostatecznyDo.Size = new System.Drawing.Size(55, 22);
             this.niedostatecznyDo.TabIndex = 22;
             this.niedostatecznyDo.Text = "40";
-            this.niedostatecznyDo.TextChanged += new System.EventHandler(this.niedostatecznyDo_TextChanged);
             // 
             // dostatecznyDo
             // 
@@ -210,11 +196,11 @@
             // 
             // widelki
             // 
-            this.widelki.Location = new System.Drawing.Point(306, 219);
+            this.widelki.Location = new System.Drawing.Point(289, 203);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;
-            this.widelki.Text = "zapisz widełki i nazwe pliku";
+            this.widelki.Text = "zapisz widełki";
             this.widelki.UseVisualStyleBackColor = true;
             this.widelki.Click += new System.EventHandler(this.widelki_Click);
             // 
@@ -241,9 +227,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(10, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 17);
+            this.label7.Size = new System.Drawing.Size(155, 17);
             this.label7.TabIndex = 33;
-            this.label7.Text = "Wyniki zapisz do pliku:";
+            this.label7.Text = "Nazwa piku z wynikami:";
             // 
             // nazwaPliku
             // 
@@ -251,23 +237,7 @@
             this.nazwaPliku.Name = "nazwaPliku";
             this.nazwaPliku.Size = new System.Drawing.Size(187, 22);
             this.nazwaPliku.TabIndex = 34;
-            this.nazwaPliku.TextChanged += new System.EventHandler(this.nazwaPliku_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 335);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(151, 17);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Wyświetl wyniki z pliku:";
-            // 
-            // Wyniki
-            // 
-            this.Wyniki.Location = new System.Drawing.Point(3, 363);
-            this.Wyniki.Name = "Wyniki";
-            this.Wyniki.Size = new System.Drawing.Size(187, 22);
-            this.Wyniki.TabIndex = 36;
+            this.nazwaPliku.Text = "wyniki";
             // 
             // button4
             // 
@@ -275,7 +245,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(227, 33);
             this.button4.TabIndex = 37;
-            this.button4.Text = "Wybirze miejsce zapisania pliku";
+            this.button4.Text = "Wybierz miejsce zapisania pliku";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -283,10 +253,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 456);
+            this.ClientSize = new System.Drawing.Size(629, 317);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.Wyniki);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.nazwaPliku);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
@@ -303,7 +271,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -326,7 +293,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -343,8 +309,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox nazwaPliku;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox Wyniki;
         private System.Windows.Forms.Button button4;
     }
 }

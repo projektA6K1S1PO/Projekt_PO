@@ -29,6 +29,9 @@ namespace Generator_pytan
 
                 Student_oceny.listaStudentów.Add(new Student_oceny());
 
+                Question.listaPytan.Add(new Question());
+
+
 
 
                 Student_oceny.listaStudentów[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
@@ -47,9 +50,11 @@ namespace Generator_pytan
 
         private void Student_dane_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();//Zamknij forme 
-            Panel_wyboru Panel_wyboru = new Panel_wyboru();
-            Panel_wyboru.Show();//Otworz forme test
+
+            Application.Exit();
+            //this.Hide();//Zamknij forme 
+            //Panel_wyboru Panel_wyboru = new Panel_wyboru();
+            //Panel_wyboru.Show();//Otworz forme test
         }
     }
 }

@@ -80,7 +80,7 @@
             this.but_stop_test.Name = "but_stop_test";
             this.but_stop_test.Size = new System.Drawing.Size(140, 87);
             this.but_stop_test.TabIndex = 3;
-            this.but_stop_test.Text = "Zakończ test i zapisz wynik";
+            this.but_stop_test.Text = "Zakończ test bez zapisywania wyniku";
             this.but_stop_test.UseVisualStyleBackColor = true;
             this.but_stop_test.Click += new System.EventHandler(this.but_stop_test_Click);
             // 
@@ -191,6 +191,7 @@
             this.but_nastepne_pyt.TabIndex = 6;
             this.but_nastepne_pyt.Text = "Następne pytanie";
             this.but_nastepne_pyt.UseVisualStyleBackColor = true;
+            this.but_nastepne_pyt.Visible = false;
             this.but_nastepne_pyt.Click += new System.EventHandler(this.but_nastepne_pyt_Click);
             // 
             // lab_wynik
