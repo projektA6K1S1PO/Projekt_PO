@@ -26,5 +26,9 @@ namespace Generator_pytan
         public static  List<Question> listaPytan = new List<Question>();//Utworzenie nowej listy pytań
         public static string[,] baza_pytan_array;
         public static double maxpkt;  //Max ilość punktów do zdobycia pobrana z pliku z testem
+        public static int[] losowanie;//Tablica na potrzeby losowania pytań bez powtórzeń
+        
+
+
     }
 }

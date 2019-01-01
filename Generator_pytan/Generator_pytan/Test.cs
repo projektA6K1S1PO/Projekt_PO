@@ -29,6 +29,7 @@ namespace Generator_pytan
 
         private void Test_Load(object sender, EventArgs e)
         {
+            //losowanie();//Tutaj musi następować funkcja losowania
             label1.Text = Question.baza_pytan_array[0, 0];//Pokaż nazwę zestawu
             label_imie.Text = Student_oceny.listaStudentów[0].Imie;//Pokaż dane studenta
             label_nazwisko.Text = Student_oceny.listaStudentów[0].Nazwisko;//Pokaż dane studenta
@@ -49,7 +50,7 @@ namespace Generator_pytan
         private void start_test_Click_1(object sender, EventArgs e)
         {
 
-            //losowanie();//Tutaj musi następować funkcja losowania
+            
             numer_pytania = 0;
             panel_pytan.Visible = true;//Pokaż panel pytań
             but_start_test.Visible = false;//Wyłącz przycisk rozpoczęcie testu
@@ -99,6 +100,61 @@ namespace Generator_pytan
                 Question.listaPytan[numer_pytania].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 12]);
                 //Obsługa kolejnych elementów 
             }
+
+        }
+
+        private void losowanie()
+        {
+            Question.losowanie = new int[50];
+            Random rnd = new Random();
+            int check = 0;
+            int temp = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    temp = rnd.Next(0, 9);
+                    for (int b = 0; b <10; b++)
+                    {
+                        if (Question.losowanie[b] == temp)
+                        {
+                            check = 1;
+                        }
+                        else
+                        {
+                            check = 0;
+                        }
+                    }
+                } while (check == 1);
+                Question.losowanie[i] = temp;
+            }
+
+
+
+
+            MessageBox.Show(Convert.ToString( Question.losowanie[0]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[1]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[2]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[3]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[4]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[5]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[6]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[7]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[8]));
+            MessageBox.Show(Convert.ToString(Question.losowanie[9]));
+            //Question.losowanie[1] = 8;
+            //Question.losowanie[2] = 7;
+            //Question.losowanie[3] = 6;
+            //Question.losowanie[4] = 5;
+            //Question.losowanie[5] = 4;
+            //Question.losowanie[6] = 3;
+            //Question.losowanie[7] = 2;
+            //Question.losowanie[8] = 1;
+            //Question.losowanie[9] = 0;
+
+
+
 
         }
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
