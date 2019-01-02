@@ -17,7 +17,7 @@ namespace Generator_pytan
 
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
         public static string folderZapisu = null;//Zmienna przechowująca ścieżke do zapisu pliku z wynikami
-       private bool button4ClickFlag = false;
+        private bool button4ClickFlag = false;
         public Panel_nauczyciela()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace Generator_pytan
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             if (!button4ClickFlag)
             {
                 string fileName = AppDomain.CurrentDomain.BaseDirectory + "wyniki.txt";
@@ -48,7 +48,9 @@ namespace Generator_pytan
                     using (FileStream fs = File.Create(fileName))
                     {
                     }
+                    folderZapisu = fileName;
                 }
+
             }
             this.Hide();//Powróc do panelu głównego
             Panel_wyboru Panel_wyboru = new Panel_wyboru();
@@ -101,7 +103,7 @@ namespace Generator_pytan
             Student_oceny.dstDo = Convert.ToInt16(dostatecznyDo.Text);
             Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
 
-            MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej "+Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo+" %");
+            MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej " + Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo + " %");
 
         }
 
@@ -112,17 +114,19 @@ namespace Generator_pytan
 
         private void button4_Click(object sender, EventArgs e)
         {
-    
+
             button4ClickFlag = true;
             SaveFileDialog saveFileDialog = stworzOknoZapisu();
 
-            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
                 zapiszWynikiDoOkna(saveFileDialog);
             }
-            
+
         }
 
-        private void zapiszWynikiDoOkna(SaveFileDialog saveFileDialog) {
+        private void zapiszWynikiDoOkna(SaveFileDialog saveFileDialog)
+        {
             Stream myStream;
             if ((myStream = saveFileDialog.OpenFile()) != null)
             {
@@ -131,13 +135,14 @@ namespace Generator_pytan
             }
         }
 
-        private SaveFileDialog stworzOknoZapisu() {
+        private SaveFileDialog stworzOknoZapisu()
+        {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
 
             saveFileDialog.Filter = "txt files (*.txt)|*.txt";
             saveFileDialog.FilterIndex = 2;
             Student_oceny.nazwa_pliku = Convert.ToString(nazwaPliku.Text);
-           
+
             saveFileDialog.RestoreDirectory = true;
             saveFileDialog.FileName = Student_oceny.nazwa_pliku;
 
@@ -147,4 +152,3 @@ namespace Generator_pytan
     }
 
 }
-

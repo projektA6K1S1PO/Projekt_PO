@@ -17,14 +17,15 @@ namespace Generator_pytan
         {
             InitializeComponent();
 
-            //tworzenie nowego pliku z nauczycielami
+            //tworzenie nowego pliku z nauczycielami (jeśli go nie ma wraz ze ścieżką)
             if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "newFolder"))
             {
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
             }
             if (!(File.Exists(Nauczyciele_dane.fileName)))
             {
-                File.Create(Nauczyciele_dane.fileName);
+                File.Create(Nauczyciele_dane.fileName).Close();
+
 
             }
         }
@@ -48,14 +49,15 @@ namespace Generator_pytan
 
 
                 DialogResult nauczyciel;
-                string zawartosc = "Dodasz nowego nauczyciela \nJego dane to:\n" + Nauczyciele_dane.listaNauczycieli[0].Stopien + Nauczyciele_dane.listaNauczycieli[0].Imie + " " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + " \nProwadźący przedmiot: " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "\nLogin: " + Nauczyciele_dane.listaNauczycieli[0].Login + "\nHasło: " + Nauczyciele_dane.listaNauczycieli[0].Haslo;
-
+                string zawartosc = "Dodasz nowego nauczyciela \nJego dane to:\n" + 
+                    Nauczyciele_dane.listaNauczycieli[0].Stopien + 
+                    Nauczyciele_dane.listaNauczycieli[0].Imie + " " + 
+                    Nauczyciele_dane.listaNauczycieli[0].Nazwisko + 
+                    " \nProwadźący przedmiot: " +Nauczyciele_dane.listaNauczycieli[0].Przedmiot + 
+                    "\nLogin: " + Nauczyciele_dane.listaNauczycieli[0].Login + 
+                    "\nHasło: " + Nauczyciele_dane.listaNauczycieli[0].Haslo;
 
                 nauczyciel = MessageBox.Show(zawartosc, "Zapisz", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
-
 
                 if (nauczyciel == DialogResult.OK)
                 {
@@ -63,7 +65,12 @@ namespace Generator_pytan
                     {
                         using (StreamWriter sw = File.AppendText(Nauczyciele_dane.fileName))
                         {
-                            sw.WriteLine(Nauczyciele_dane.listaNauczycieli[0].Stopien + ";" + Nauczyciele_dane.listaNauczycieli[0].Imie + ";" + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + ";" + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + ";" + Nauczyciele_dane.listaNauczycieli[0].Login + ";" + Nauczyciele_dane.listaNauczycieli[0].Haslo, Encoding.UTF8);
+                            sw.WriteLine(Nauczyciele_dane.listaNauczycieli[0].Stopien + ";" 
+                                + Nauczyciele_dane.listaNauczycieli[0].Imie + ";" 
+                                + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + ";" 
+                                + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + ";" 
+                                + Nauczyciele_dane.listaNauczycieli[0].Login + ";" 
+                                + Nauczyciele_dane.listaNauczycieli[0].Haslo, Encoding.UTF8);
 
                             sw.Close();
 

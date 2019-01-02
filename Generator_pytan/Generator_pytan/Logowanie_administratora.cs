@@ -23,7 +23,7 @@ namespace Generator_pytan
             {
                 this.Hide();//Zamknij forme Logowanie
                 Nauczyciele Nauczyciele = new Nauczyciele();
-                Nauczyciele.Show();//Otworz panel administratora
+                Nauczyciele.Show();//Otworz panel dodawania nauczycieli
             }
             else
             {
@@ -39,10 +39,6 @@ namespace Generator_pytan
             Panel_wyboru.Show();//Otwórz panel wyboru
         }
 
-        private void LogAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void LogAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {

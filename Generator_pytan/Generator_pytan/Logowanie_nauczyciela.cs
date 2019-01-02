@@ -20,12 +20,11 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int poprawny_login = 0;
+            int poprawny_login = 0;//Zmienna 0/1 zły/poprawny login
             Nauczyciele_dane.baza_nauczycieli_array = LoadCsv(Nauczyciele_dane.fileName); // Pobierz danę z pliku do tablicy
 
-            for (int i = 0; i < LoadCsvLines(Nauczyciele_dane.fileName); i++)
+            for (int i = 0; i < LoadCsvLines(Nauczyciele_dane.fileName); i++)//Sprawdz wszystkich nauczycieli
             {
-
                 if (login_box.Text == Nauczyciele_dane.baza_nauczycieli_array[i,4] && haslo_box.Text == Nauczyciele_dane.baza_nauczycieli_array[i, 5])//Sprawdzenie hasla i loginu
                 {
                     poprawny_login = 1;
@@ -34,8 +33,8 @@ namespace Generator_pytan
             if (poprawny_login == 1)//Sprawdzenie hasla i loginu
             {
                 this.Hide();//Zamknij forme Logowanie
-                Panel_nauczyciela Panel_adminstratora = new Panel_nauczyciela();
-                Panel_adminstratora.Show();//Otworz panel administratora
+                Panel_nauczyciela Panel_nauczyciela = new Panel_nauczyciela();
+                Panel_nauczyciela.Show();//Otworz panel administratora
             }
             else
             {

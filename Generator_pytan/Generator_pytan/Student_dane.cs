@@ -26,13 +26,9 @@ namespace Generator_pytan
             }
             else
             {
-
                 Student_oceny.listaStudentów.Add(new Student_oceny());
 
                 Question.listaPytan.Add(new Question());
-
-
-
 
                 Student_oceny.listaStudentów[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
                 Student_oceny.listaStudentów[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska studentowi
@@ -43,7 +39,6 @@ namespace Generator_pytan
                 Test Test = new Test();
                 Test.Show();//Otworz forme test
 
-
             }
         }
 
@@ -52,9 +47,6 @@ namespace Generator_pytan
         {
 
             Application.Exit();
-            //this.Hide();//Zamknij forme 
-            //Panel_wyboru Panel_wyboru = new Panel_wyboru();
-            //Panel_wyboru.Show();//Otworz forme test
         }
     }
 }

@@ -105,7 +105,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie Administrator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogAdmin_FormClosing);
-            this.Load += new System.EventHandler(this.LogAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
