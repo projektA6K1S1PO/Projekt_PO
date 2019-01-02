@@ -16,6 +16,17 @@ namespace Generator_pytan
         public Nauczyciele()
         {
             InitializeComponent();
+
+            //tworzenie nowego pliku z nauczycielami
+            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "newFolder"))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
+            }
+            if (!(File.Exists(Nauczyciele_dane.fileName)))
+            {
+                File.Create(Nauczyciele_dane.fileName);
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,52 +38,47 @@ namespace Generator_pytan
             }
             else
             {
-                
                 Nauczyciele_dane.listaNauczycieli.Add(new Nauczyciele_dane());
-
                 Nauczyciele_dane.listaNauczycieli[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Stopien = Convert.ToString(textBox_stopien.Text);//Nadanie stopnia nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Przedmiot = Convert.ToString(textBox_przedmiot.Text);//Nadanie numeru indeksu nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Login = Convert.ToString(textBox_login.Text);//Nadanie loginu nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Haslo = Convert.ToString(textBox_haslo.Text);//Nadanie hasla nauczycielowi
-                
-                
-
-            }
 
 
-            DialogResult nauczyciel;
-            string zawartosc = "Dodasz nowego nauczyciela \nJego dane to:\n" + Nauczyciele_dane.listaNauczycieli[0].Stopien + Nauczyciele_dane.listaNauczycieli[0].Imie + " " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + " \nProwadźący przedmiot: " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "\nLogin: " + Nauczyciele_dane.listaNauczycieli[0].Login + "\nHasło: " + Nauczyciele_dane.listaNauczycieli[0].Haslo;
-            
+                DialogResult nauczyciel;
+                string zawartosc = "Dodasz nowego nauczyciela \nJego dane to:\n" + Nauczyciele_dane.listaNauczycieli[0].Stopien + Nauczyciele_dane.listaNauczycieli[0].Imie + " " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + " \nProwadźący przedmiot: " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "\nLogin: " + Nauczyciele_dane.listaNauczycieli[0].Login + "\nHasło: " + Nauczyciele_dane.listaNauczycieli[0].Haslo;
 
-            nauczyciel = MessageBox.Show( zawartosc ,"Zapisz",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //tworzenie nowego pliku z nauczycielami
-            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "newFolder"))
-            {
-                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
-            }
-            string fileName = AppDomain.CurrentDomain.BaseDirectory + "newFolder\\nauczyciele.csv";
-            
+                nauczyciel = MessageBox.Show(zawartosc, "Zapisz", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if (nauczyciel == DialogResult.OK)
-            {
-                if (!(File.Exists(fileName)))
+
+
+
+
+                if (nauczyciel == DialogResult.OK)
                 {
-                    File.Create(fileName);
-                }
-                else
-                {
-
-                    using (StreamWriter sw = File.AppendText(fileName))
+                    if (File.Exists(Nauczyciele_dane.fileName))
                     {
+                        using (StreamWriter sw = File.AppendText(Nauczyciele_dane.fileName))
+                        {
+                            sw.WriteLine(Nauczyciele_dane.listaNauczycieli[0].Stopien + ";" + Nauczyciele_dane.listaNauczycieli[0].Imie + ";" + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + ";" + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + ";" + Nauczyciele_dane.listaNauczycieli[0].Login + ";" + Nauczyciele_dane.listaNauczycieli[0].Haslo, Encoding.UTF8);
 
-                        sw.WriteLine(Nauczyciele_dane.listaNauczycieli[0].Stopien + "  " + Nauczyciele_dane.listaNauczycieli[0].Imie + "  " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + "  " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "  " + Nauczyciele_dane.listaNauczycieli[0].Login + " " + Nauczyciele_dane.listaNauczycieli[0].Haslo);
-                        sw.Close();
+                            sw.Close();
+
+                            this.Hide();//Powróc do panelu głównego
+                            Panel_wyboru Panel_wyboru = new Panel_wyboru();
+                            Panel_wyboru.Show();//Otwórz panel wyboru
+                        }
                     }
                 }
+
             }
+
+
+
         }
+
     }
 }

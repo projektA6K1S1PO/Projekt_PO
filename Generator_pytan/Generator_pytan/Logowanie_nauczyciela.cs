@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Generator_pytan
 {
@@ -19,7 +20,18 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (login_box.Text == Properties.Settings.Default.Login &&  haslo_box.Text == Properties.Settings.Default.Haslo)//Sprawdzenie hasla i loginu
+            int poprawny_login = 0;
+            Nauczyciele_dane.baza_nauczycieli_array = LoadCsv(Nauczyciele_dane.fileName); // Pobierz danę z pliku do tablicy
+
+            for (int i = 0; i < LoadCsvLines(Nauczyciele_dane.fileName); i++)
+            {
+
+                if (login_box.Text == Nauczyciele_dane.baza_nauczycieli_array[i,4] && haslo_box.Text == Nauczyciele_dane.baza_nauczycieli_array[i, 5])//Sprawdzenie hasla i loginu
+                {
+                    poprawny_login = 1;
+                }
+            }
+            if (poprawny_login == 1)//Sprawdzenie hasla i loginu
             {
                 this.Hide();//Zamknij forme Logowanie
                 Panel_nauczyciela Panel_adminstratora = new Panel_nauczyciela();
@@ -32,11 +44,6 @@ namespace Generator_pytan
           
         }
 
-        private void login_box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();//Powróc do panelu głównego
@@ -44,15 +51,58 @@ namespace Generator_pytan
             Panel_wyboru.Show();//Otwórz panel wyboru
         }
 
-        private void Logowanie_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void Logowanie_nauczyciela_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();//Bezwarunkowe zamknięcie aplikacji
+        }
+
+        private string[,] LoadCsv(string filename)
+        {
+            // Wyłuskaj cały tekst z pliku
+            string whole_file = File.ReadAllText(filename);
+
+            // Podziel na linię
+            whole_file = whole_file.Replace('\n', '\r');
+            string[] lines = whole_file.Split(new char[] { '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
+
+            // Zbadaj ile kolumn oraz wierszy jest w pliku
+            int num_rows = lines.Length;
+            int num_cols = lines[0].Split(';').Length;
+
+            // Utwórz nową tablicę o wymaganych wymiarach
+            string[,] values = new string[num_rows, num_cols];
+
+            // Załaduj danymi
+            for (int r = 0; r < num_rows; r++)
+            {
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < num_cols; c++)
+                {
+                    values[r, c] = line_r[c];
+                }
+            }
+
+            // Zwróc tablicę w wyniku
+            return values;
+        }
+
+        private int LoadCsvLines(string filename)
+        {
+            // Wyłuskaj cały tekst z pliku
+            string whole_file = File.ReadAllText(filename);
+
+            // Podziel na linię
+            whole_file = whole_file.Replace('\n', '\r');
+            string[] lines = whole_file.Split(new char[] { '\r' },
+                StringSplitOptions.RemoveEmptyEntries);
+
+            // Zbadaj ile kolumn oraz wierszy jest w pliku
+            int num_rows = lines.Length;
+            int num_cols = lines[0].Split(';').Length;
+
+            
+            return num_rows;
         }
     }
 }

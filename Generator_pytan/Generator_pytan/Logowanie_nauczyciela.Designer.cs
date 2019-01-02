@@ -60,7 +60,6 @@
             this.login_box.Name = "login_box";
             this.login_box.Size = new System.Drawing.Size(145, 22);
             this.login_box.TabIndex = 2;
-            this.login_box.TextChanged += new System.EventHandler(this.login_box_TextChanged);
             // 
             // haslo_box
             // 
@@ -106,7 +105,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie nauczyciela";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Logowanie_nauczyciela_FormClosing);
-            this.Load += new System.EventHandler(this.Logowanie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

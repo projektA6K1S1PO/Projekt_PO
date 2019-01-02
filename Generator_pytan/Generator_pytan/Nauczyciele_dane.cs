@@ -19,8 +19,8 @@ namespace Generator_pytan
         public static List<Nauczyciele_dane> listaNauczycieli = new List<Nauczyciele_dane>();//Utworzenie nowej listy nauczycieli
 
         // Zmienne przydatne
-      
-        //public static string nazwa_pliku_nauczyciele;
+        public static string[,] baza_nauczycieli_array;
+        public static string fileName = AppDomain.CurrentDomain.BaseDirectory + "newFolder\\nauczyciele.csv";
 
     }
 }

@@ -57,6 +57,7 @@
             // 
             this.haslo_box.Location = new System.Drawing.Point(153, 67);
             this.haslo_box.Name = "haslo_box";
+            this.haslo_box.PasswordChar = '*';
             this.haslo_box.Size = new System.Drawing.Size(127, 22);
             this.haslo_box.TabIndex = 2;
             // 

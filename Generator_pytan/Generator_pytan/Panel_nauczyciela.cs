@@ -39,12 +39,6 @@ namespace Generator_pytan
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "newFolder"))
-            {
-                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
-            }
-            string fileName = AppDomain.CurrentDomain.BaseDirectory+ "newFolder\\wyniki.csv";
-            */
             
             if (!button4ClickFlag)
             {
