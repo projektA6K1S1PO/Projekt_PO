@@ -18,16 +18,6 @@ namespace Generator_pytan
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -40,18 +30,13 @@ namespace Generator_pytan
                 
                 Nauczyciele_dane.listaNauczycieli.Add(new Nauczyciele_dane());
 
-                //Question.listaPytan.Add(new Question());
-
-
-
-
                 Nauczyciele_dane.listaNauczycieli[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Stopien = Convert.ToString(textBox_stopien.Text);//Nadanie stopnia nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Przedmiot = Convert.ToString(textBox_przedmiot.Text);//Nadanie numeru indeksu nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Login = Convert.ToString(textBox_login.Text);//Nadanie loginu nauczycielowi
                 Nauczyciele_dane.listaNauczycieli[0].Haslo = Convert.ToString(textBox_haslo.Text);//Nadanie hasla nauczycielowi
-                this.Hide();//Zamknij forme 
+                
                 
 
             }
@@ -68,27 +53,26 @@ namespace Generator_pytan
             {
                 Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
             }
-            string fileName = AppDomain.CurrentDomain.BaseDirectory + "newFolder\\wyniki.csv";
+            string fileName = AppDomain.CurrentDomain.BaseDirectory + "newFolder\\nauczyciele.csv";
+            
 
             if (nauczyciel == DialogResult.OK)
             {
-                if (File.Exists(Nauczyciele_dane.nazwa_pliku_nauczyciele))
+                if (!(File.Exists(fileName)))
                 {
-                    using (StreamWriter sw = File.AppendText(Panel_nauczyciela.folderZapisu))
+                    File.Create(fileName);
+                }
+                else
+                {
+
+                    using (StreamWriter sw = File.AppendText(fileName))
                     {
 
                         sw.WriteLine(Nauczyciele_dane.listaNauczycieli[0].Stopien + "  " + Nauczyciele_dane.listaNauczycieli[0].Imie + "  " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + "  " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "  " + Nauczyciele_dane.listaNauczycieli[0].Login + " " + Nauczyciele_dane.listaNauczycieli[0].Haslo);
                         sw.Close();
                     }
                 }
-
-
             }
-        }
-
-        private void imie_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

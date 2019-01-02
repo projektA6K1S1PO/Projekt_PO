@@ -20,7 +20,7 @@ namespace Generator_pytan
 
         // Zmienne przydatne
       
-        public static string nazwa_pliku_nauczyciele;
+        //public static string nazwa_pliku_nauczyciele;
 
     }
 }

@@ -88,7 +88,6 @@
             this.label5.Size = new System.Drawing.Size(67, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Nazwisko";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -105,7 +104,6 @@
             this.textBox_imie.Name = "textBox_imie";
             this.textBox_imie.Size = new System.Drawing.Size(211, 22);
             this.textBox_imie.TabIndex = 6;
-            this.textBox_imie.TextChanged += new System.EventHandler(this.imie_TextChanged);
             // 
             // textBox_nazwisko
             // 
@@ -141,7 +139,6 @@
             this.textBox_haslo.Name = "textBox_haslo";
             this.textBox_haslo.Size = new System.Drawing.Size(211, 22);
             this.textBox_haslo.TabIndex = 11;
-            this.textBox_haslo.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // button1
             // 
