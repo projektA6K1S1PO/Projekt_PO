@@ -29,12 +29,13 @@ namespace Generator_pytan
 
         private void Test_Load(object sender, EventArgs e)
         {
+            Question.maxpkt = 0;
             losowanie();//Tutaj musi następować funkcja losowania
             label1.Text = Question.baza_pytan_array[0, 0];//Pokaż nazwę zestawu
-            label_imie.Text = Student_oceny.listaStudentów[0].Imie;//Pokaż dane studenta
-            label_nazwisko.Text = Student_oceny.listaStudentów[0].Nazwisko;//Pokaż dane studenta
-            label_grupa.Text = Student_oceny.listaStudentów[0].Grupa;//Pokaż dane studenta
-            label_indeks.Text = Student_oceny.listaStudentów[0].Nr_indeksu;//Pokaż dane studenta
+            label_imie.Text = Student_oceny.listaStudentów[Student_oceny.ilosc_studentow-1].Imie;//Pokaż dane studenta
+            label_nazwisko.Text = Student_oceny.listaStudentów[Student_oceny.ilosc_studentow-1].Nazwisko;//Pokaż dane studenta
+            label_grupa.Text = Student_oceny.listaStudentów[Student_oceny.ilosc_studentow-1].Grupa;//Pokaż dane studenta
+            label_indeks.Text = Student_oceny.listaStudentów[Student_oceny.ilosc_studentow-1].Nr_indeksu;//Pokaż dane studenta
             generuj_obiekty_pytan();//Generuj obiekty klasy Question
             napelnij_danymi_obiekty();//Napełnij danymi obiekty
         }
@@ -195,7 +196,11 @@ namespace Generator_pytan
                         using (StreamWriter sw = File.AppendText(Panel_nauczyciela.folderZapisu))
                         {
 
-                            sw.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  " + Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.listaStudentów[0].Grupa + "  " + Student_oceny.listaStudentów[0].Nr_indeksu + "   Ocena:" + ocena);
+                            sw.WriteLine(Student_oceny.listaStudentów[Student_oceny.ilosc_studentow - 1].Nazwisko 
+                                + "  " + Student_oceny.listaStudentów[Student_oceny.ilosc_studentow - 1].Imie + "  " 
+                                + Student_oceny.listaStudentów[Student_oceny.ilosc_studentow - 1].Grupa + "  " 
+                                + Student_oceny.listaStudentów[Student_oceny.ilosc_studentow - 1].Nr_indeksu 
+                                + "   Ocena:" + ocena);
                             sw.Close();
                         }
                     }

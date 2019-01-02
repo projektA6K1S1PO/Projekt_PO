@@ -19,28 +19,60 @@ namespace Generator_pytan
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if((textBox_imie.Text=="") || (textBox_nazwisko.Text=="" )|| (textBox_grupa.Text=="" )|| (textBox_indeks.Text == ""))
+            int check = 0;
+            if ((textBox_imie.Text == "") || (textBox_nazwisko.Text == "") || (textBox_grupa.Text == "") || (textBox_indeks.Text == ""))
             {
                 MessageBox.Show("Wypełnij wszytkie pola", "Błąd");
             }
             else
             {
-                Student_oceny.listaStudentów.Add(new Student_oceny());
+                if (Student_oceny.ilosc_studentow == 0)
+                {
+                    Student_oceny.listaStudentów.Add(new Student_oceny());
 
-                Question.listaPytan.Add(new Question());
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Grupa = Convert.ToString(textBox_grupa.Text);//Nadanie Grupy studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Nr_indeksu = Convert.ToString(textBox_indeks.Text);//Nadanie numeru indeksu studentowi
+                    Student_oceny.ilosc_studentow++;
+                    this.Hide();//Zamknij forme 
+                    Test Test = new Test();
+                    Test.Show();//Otworz forme test
+                }
+                else
+                {
+                    Student_oceny.listaStudentów.Add(new Student_oceny());
 
-                Student_oceny.listaStudentów[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
-                Student_oceny.listaStudentów[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska studentowi
-                Student_oceny.listaStudentów[0].Grupa = Convert.ToString(textBox_grupa.Text);//Nadanie Grupy studentowi
-                Student_oceny.listaStudentów[0].Nr_indeksu = Convert.ToString(textBox_indeks.Text);//Nadanie numeru indeksu studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Grupa = Convert.ToString(textBox_grupa.Text);//Nadanie Grupy studentowi
+                    Student_oceny.listaStudentów[Student_oceny.ilosc_studentow].Nr_indeksu = Convert.ToString(textBox_indeks.Text);//Nadanie numeru indeksu studentowi
 
-                this.Hide();//Zamknij forme 
-                Test Test = new Test();
-                Test.Show();//Otworz forme test
+                    for (int i = 0; i <= Student_oceny.ilosc_studentow-1; i++)
+                    {
+                        if (Student_oceny.listaStudentów[i].Nr_indeksu == Convert.ToString(textBox_indeks.Text)) check = 1;
+                    }
+
+                    if (check==1)
+                    {
+                        MessageBox.Show("Student o indeksie:" + textBox_indeks.Text + " już rozwiązywał ten test brak możliwości powtórnego podejścia", "UWAGA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //Student_oceny.listaStudentów.RemoveRange(Student_oceny.ilosc_studentow, 1);
+                    }
+                    else
+                    {
+                        Student_oceny.ilosc_studentow++;
+
+                        this.Hide();//Zamknij forme 
+                        Test Test = new Test();
+                        Test.Show();//Otworz forme test
+                    }
+                }
+
 
             }
         }
+    
+
 
 
         private void Student_dane_FormClosing(object sender, FormClosingEventArgs e)
