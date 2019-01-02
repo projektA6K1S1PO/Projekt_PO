@@ -29,7 +29,7 @@ namespace Generator_pytan
 
         private void Test_Load(object sender, EventArgs e)
         {
-            //losowanie();//Tutaj musi następować funkcja losowania
+            losowanie();//Tutaj musi następować funkcja losowania
             label1.Text = Question.baza_pytan_array[0, 0];//Pokaż nazwę zestawu
             label_imie.Text = Student_oceny.listaStudentów[0].Imie;//Pokaż dane studenta
             label_nazwisko.Text = Student_oceny.listaStudentów[0].Nazwisko;//Pokaż dane studenta
@@ -87,17 +87,17 @@ namespace Generator_pytan
         {
             for (int numer_pytania = 0; numer_pytania < Convert.ToInt16(Question.baza_pytan_array[0, 2]); numer_pytania++)
             {
-                Question.listaPytan[numer_pytania].tresc = Question.baza_pytan_array[numer_pytania + 2, 1];
-                Question.listaPytan[numer_pytania].odp_1 = Question.baza_pytan_array[numer_pytania + 2, 3];
-                Question.listaPytan[numer_pytania].odp_2 = Question.baza_pytan_array[numer_pytania + 2, 4];
-                Question.listaPytan[numer_pytania].odp_3 = Question.baza_pytan_array[numer_pytania + 2, 5];
-                Question.listaPytan[numer_pytania].odp_4 = Question.baza_pytan_array[numer_pytania + 2, 6];
-                Question.listaPytan[numer_pytania].odp_5 = Question.baza_pytan_array[numer_pytania + 2, 7];
-                Question.listaPytan[numer_pytania].odp_1_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 8]);
-                Question.listaPytan[numer_pytania].odp_2_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 9]);
-                Question.listaPytan[numer_pytania].odp_3_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 10]);
-                Question.listaPytan[numer_pytania].odp_4_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 11]);
-                Question.listaPytan[numer_pytania].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 12]);
+                Question.listaPytan[Question.losowanie[numer_pytania]].tresc = Question.baza_pytan_array[numer_pytania + 2, 1];
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_1 = Question.baza_pytan_array[numer_pytania + 2, 3];
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_2 = Question.baza_pytan_array[numer_pytania + 2, 4];
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_3 = Question.baza_pytan_array[numer_pytania + 2, 5];
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_4 = Question.baza_pytan_array[numer_pytania + 2, 6];
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_5 = Question.baza_pytan_array[numer_pytania + 2, 7];
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_1_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 8]);
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_2_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 9]);
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_3_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 10]);
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_4_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 11]);
+                Question.listaPytan[Question.losowanie[numer_pytania]].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 12]);
                 //Obsługa kolejnych elementów 
             }
 
@@ -105,57 +105,40 @@ namespace Generator_pytan
 
         private void losowanie()
         {
-            Question.losowanie = new int[50];
-            Random rnd = new Random();
+            
             int check = 0;
+            Question.losowanie = new int[50];
+
+            for (int i = 0; i < Question.losowanie.Length; i++)
+            {
+                Question.losowanie[i] = 0;
+            }
+
+            Random rnd = new Random();
             int temp = 0;
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < Convert.ToInt16(Question.baza_pytan_array[0, 2]); i++)
             {
                 do
                 {
-                    temp = rnd.Next(0, 9);
-                    for (int b = 0; b <10; b++)
+                    temp = rnd.Next(1, 12)-1;
+                    check = 0;
+                    for (int b = 0; b < Convert.ToInt16(Question.baza_pytan_array[0, 2]); b++)
                     {
                         if (Question.losowanie[b] == temp)
                         {
                             check = 1;
-                        }
-                        else
-                        {
-                            check = 0;
+                            break;
                         }
                     }
                 } while (check == 1);
                 Question.losowanie[i] = temp;
             }
 
-
-
-
-            MessageBox.Show(Convert.ToString( Question.losowanie[0]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[1]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[2]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[3]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[4]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[5]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[6]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[7]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[8]));
-            MessageBox.Show(Convert.ToString(Question.losowanie[9]));
-            //Question.losowanie[1] = 8;
-            //Question.losowanie[2] = 7;
-            //Question.losowanie[3] = 6;
-            //Question.losowanie[4] = 5;
-            //Question.losowanie[5] = 4;
-            //Question.losowanie[6] = 3;
-            //Question.losowanie[7] = 2;
-            //Question.losowanie[8] = 1;
-            //Question.losowanie[9] = 0;
-
-
-
-
+            for (int i = 0; i < Convert.ToInt16(Question.baza_pytan_array[0, 2]); i++)
+            {
+                Question.losowanie[i] = Question.losowanie[i]-1;
+            }
         }
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
