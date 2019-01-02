@@ -37,56 +37,52 @@ namespace Generator_pytan
             }
             else
             {
-                //Tu pozmieniać
-                Student_oceny.listaStudentów.Add(new Student_oceny());
+                
+                Nauczyciele_dane.listaNauczycieli.Add(new Nauczyciele_dane());
 
-                Question.listaPytan.Add(new Question());
-
-
+                //Question.listaPytan.Add(new Question());
 
 
-                Student_oceny.listaStudentów[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia nauczycielowi
-                Student_oceny.listaStudentów[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska nauczycielowi
-                Student_oceny.listaStudentów[0].Grupa = Convert.ToString(textBox_grupa.Text);//Nadanie Grupy nauczycielowi
-                Student_oceny.listaStudentów[0].Nr_indeksu = Convert.ToString(textBox_indeks.Text);//Nadanie numeru indeksu nauczycielowi
 
+
+                Nauczyciele_dane.listaNauczycieli[0].Imie = Convert.ToString(textBox_imie.Text);//Nadanie imienia nauczycielowi
+                Nauczyciele_dane.listaNauczycieli[0].Nazwisko = Convert.ToString(textBox_nazwisko.Text);//Nadanie nazwiska nauczycielowi
+                Nauczyciele_dane.listaNauczycieli[0].Stopien = Convert.ToString(textBox_stopien.Text);//Nadanie stopnia nauczycielowi
+                Nauczyciele_dane.listaNauczycieli[0].Przedmiot = Convert.ToString(textBox_przedmiot.Text);//Nadanie numeru indeksu nauczycielowi
+                Nauczyciele_dane.listaNauczycieli[0].Login = Convert.ToString(textBox_login.Text);//Nadanie loginu nauczycielowi
+                Nauczyciele_dane.listaNauczycieli[0].Haslo = Convert.ToString(textBox_haslo.Text);//Nadanie hasla nauczycielowi
                 this.Hide();//Zamknij forme 
-                Test Test = new Test();
-                Test.Show();//Otworz forme test
-
+                
 
             }
 
 
+            DialogResult nauczyciel;
+            string zawartosc = "Dodasz nowego nauczyciela \nJego dane to:\n" + Nauczyciele_dane.listaNauczycieli[0].Stopien + Nauczyciele_dane.listaNauczycieli[0].Imie + " " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + " \nProwadźący przedmiot: " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "\nLogin: " + Nauczyciele_dane.listaNauczycieli[0].Login + "\nHasło: " + Nauczyciele_dane.listaNauczycieli[0].Haslo;
+            
 
+            nauczyciel = MessageBox.Show( zawartosc ,"Zapisz",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            result = MessageBox.Show("Dodasz nowego nauczyciela \nJego dane to: " +  + " Punktów \nNa " + Question.maxpkt + " możliwych\nOcena: " + ocena + "\nProcent: " + Student_oceny.procenty, "Koniec Testu", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
+            //tworzenie nowego pliku z nauczycielami
+            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "newFolder"))
             {
-                if (File.Exists(Panel_nauczyciela.folderZapisu))
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
+            }
+            string fileName = AppDomain.CurrentDomain.BaseDirectory + "newFolder\\wyniki.csv";
+
+            if (nauczyciel == DialogResult.OK)
+            {
+                if (File.Exists(Nauczyciele_dane.nazwa_pliku_nauczyciele))
                 {
                     using (StreamWriter sw = File.AppendText(Panel_nauczyciela.folderZapisu))
                     {
 
-                        sw.WriteLine(Student_oceny.listaStudentów[0].Nazwisko + "  " + Student_oceny.listaStudentów[0].Imie + "  " + Student_oceny.listaStudentów[0].Grupa + "  " + Student_oceny.listaStudentów[0].Nr_indeksu + "   Ocena:" + ocena);
+                        sw.WriteLine(Nauczyciele_dane.listaNauczycieli[0].Stopien + "  " + Nauczyciele_dane.listaNauczycieli[0].Imie + "  " + Nauczyciele_dane.listaNauczycieli[0].Nazwisko + "  " + Nauczyciele_dane.listaNauczycieli[0].Przedmiot + "  " + Nauczyciele_dane.listaNauczycieli[0].Login + " " + Nauczyciele_dane.listaNauczycieli[0].Haslo);
                         sw.Close();
                     }
                 }
 
-              
+
             }
         }
 

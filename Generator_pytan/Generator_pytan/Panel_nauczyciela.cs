@@ -17,6 +17,7 @@ namespace Generator_pytan
 
         public static string filePath = null;//Zmienna przechowująca sciezke do pliku z pytaniami
         public static string folderZapisu = null;//Zmienna przechowująca ścieżke do zapisu pliku z wynikami
+       private bool button4ClickFlag = false;
         public Panel_nauczyciela()
         {
             InitializeComponent();
@@ -38,6 +39,23 @@ namespace Generator_pytan
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /*if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "newFolder"))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "newFolder");
+            }
+            string fileName = AppDomain.CurrentDomain.BaseDirectory+ "newFolder\\wyniki.csv";
+            */
+            
+            if (!button4ClickFlag)
+            {
+                string fileName = AppDomain.CurrentDomain.BaseDirectory + "wyniki.txt";
+                if (!File.Exists(fileName))
+                {
+                    using (FileStream fs = File.Create(fileName))
+                    {
+                    }
+                }
+            }
             this.Hide();//Powróc do panelu głównego
             Panel_wyboru Panel_wyboru = new Panel_wyboru();
             Panel_wyboru.Show();//Otwórz panel wyboru
@@ -100,25 +118,36 @@ namespace Generator_pytan
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Student_oceny.nazwa_pliku = Convert.ToString(nazwaPliku.Text);
-            Stream myStream;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+    
+            button4ClickFlag = true;
+            SaveFileDialog saveFileDialog = stworzOknoZapisu();
 
-            saveFileDialog1.Filter = "txt files (*.txt)|*.txt";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.FileName = Student_oceny.nazwa_pliku;
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                if ((myStream = saveFileDialog1.OpenFile()) != null)
-                {
-                    folderZapisu = saveFileDialog1.FileName;
-                    myStream.Close();
-                }
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                zapiszWynikiDoOkna(saveFileDialog);
             }
+            
+        }
 
+        private void zapiszWynikiDoOkna(SaveFileDialog saveFileDialog) {
+            Stream myStream;
+            if ((myStream = saveFileDialog.OpenFile()) != null)
+            {
+                folderZapisu = saveFileDialog.FileName;
+                myStream.Close();
+            }
+        }
 
+        private SaveFileDialog stworzOknoZapisu() {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+
+            saveFileDialog.Filter = "txt files (*.txt)|*.txt";
+            saveFileDialog.FilterIndex = 2;
+            Student_oceny.nazwa_pliku = Convert.ToString(nazwaPliku.Text);
+           
+            saveFileDialog.RestoreDirectory = true;
+            saveFileDialog.FileName = Student_oceny.nazwa_pliku;
+
+            return saveFileDialog;
         }
 
     }
