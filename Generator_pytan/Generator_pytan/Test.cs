@@ -155,9 +155,17 @@ namespace Generator_pytan
             {
                 but_nastepne_pyt.Visible = false;
                 panel_pytan.Visible = false;
-                
-                Question.maxpkt = Convert.ToInt32(Question.baza_pytan_array[0, 18]);//Pobranie maksymalnej ilości punktów z tablicy do zmiennej lokalnej
-                Student_oceny.procenty = (double)(wynik / Question.maxpkt) * 100;
+
+                //Obliczenie max ilości punktów z zestawu
+                for (int i = 0; i < (Convert.ToInt16(Question.baza_pytan_array[0, 2])); i++)
+                {
+                    for (int b = 0; b < 5; b++)//5 odp w zestawie
+                    {
+                        Question.maxpkt = Question.maxpkt + Convert.ToDouble(Question.baza_pytan_array[i + 2, b+8]);
+                    }
+                }
+                MessageBox.Show(Convert.ToString(Question.maxpkt));
+                    Student_oceny.procenty = (double)(wynik / Question.maxpkt) * 100;
                 string ocena = "0";
 
                 if (Student_oceny.procenty < Student_oceny.ndstDo)

@@ -50,6 +50,10 @@ namespace Generator_pytan
                     }
                     folderZapisu = fileName;
                 }
+                else
+                {
+                    folderZapisu = fileName;
+                }
 
             }
             this.Hide();//Powróc do panelu głównego
