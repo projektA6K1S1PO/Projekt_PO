@@ -66,6 +66,7 @@
             // 
             // but_start_test
             // 
+            this.but_start_test.ForeColor = System.Drawing.Color.Red;
             this.but_start_test.Location = new System.Drawing.Point(307, 505);
             this.but_start_test.Name = "but_start_test";
             this.but_start_test.Size = new System.Drawing.Size(141, 87);

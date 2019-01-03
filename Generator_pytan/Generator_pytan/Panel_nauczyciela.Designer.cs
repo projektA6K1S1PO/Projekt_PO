@@ -200,7 +200,7 @@
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(115, 78);
             this.widelki.TabIndex = 30;
-            this.widelki.Text = "zapisz widełki";
+            this.widelki.Text = "Zapisz progi procentowe";
             this.widelki.UseVisualStyleBackColor = true;
             this.widelki.Click += new System.EventHandler(this.widelki_Click);
             // 
