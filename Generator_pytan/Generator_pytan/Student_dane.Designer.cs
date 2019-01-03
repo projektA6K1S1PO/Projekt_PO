@@ -108,7 +108,8 @@
             // 
             // button_nowy_student
             // 
-            this.button_nowy_student.Location = new System.Drawing.Point(147, 254);
+            this.button_nowy_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_nowy_student.Location = new System.Drawing.Point(147, 257);
             this.button_nowy_student.Name = "button_nowy_student";
             this.button_nowy_student.Size = new System.Drawing.Size(193, 46);
             this.button_nowy_student.TabIndex = 17;
@@ -119,9 +120,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(149, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 59);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 51);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
