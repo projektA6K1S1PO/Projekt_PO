@@ -204,7 +204,7 @@
             this.but_nastepne_pyt.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.but_nastepne_pyt.Location = new System.Drawing.Point(650, 505);
             this.but_nastepne_pyt.Name = "but_nastepne_pyt";
-            this.but_nastepne_pyt.Size = new System.Drawing.Size(169, 105);
+            this.but_nastepne_pyt.Size = new System.Drawing.Size(175, 119);
             this.but_nastepne_pyt.TabIndex = 6;
             this.but_nastepne_pyt.Text = "Następne pytanie";
             this.but_nastepne_pyt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
