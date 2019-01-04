@@ -109,6 +109,7 @@
             // button_nowy_student
             // 
             this.button_nowy_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_nowy_student.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button_nowy_student.Location = new System.Drawing.Point(147, 257);
             this.button_nowy_student.Name = "button_nowy_student";
             this.button_nowy_student.Size = new System.Drawing.Size(193, 46);

@@ -69,7 +69,7 @@
             // 
             // but_start_test
             // 
-            this.but_start_test.ForeColor = System.Drawing.Color.Red;
+            this.but_start_test.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.but_start_test.Location = new System.Drawing.Point(345, 505);
             this.but_start_test.Name = "but_start_test";
             this.but_start_test.Size = new System.Drawing.Size(159, 105);
@@ -80,6 +80,7 @@
             // 
             // but_stop_test
             // 
+            this.but_stop_test.ForeColor = System.Drawing.Color.Red;
             this.but_stop_test.Image = ((System.Drawing.Image)(resources.GetObject("but_stop_test.Image")));
             this.but_stop_test.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.but_stop_test.Location = new System.Drawing.Point(932, 505);
