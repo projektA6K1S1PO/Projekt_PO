@@ -41,11 +41,14 @@
             // 
             // button1
             // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(306, 117);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 36);
+            this.button1.Size = new System.Drawing.Size(106, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Zaloguj";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -108,6 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(478, 211);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_powrot);
@@ -121,6 +125,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie Administrator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogAdmin_FormClosing);
+            this.Load += new System.EventHandler(this.Logowanie_administratora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

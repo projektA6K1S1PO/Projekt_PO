@@ -103,5 +103,10 @@ namespace Generator_pytan
             
             return num_rows;
         }
+
+        private void Logowanie_nauczyciela_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

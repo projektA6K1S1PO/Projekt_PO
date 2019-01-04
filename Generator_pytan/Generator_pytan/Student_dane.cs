@@ -80,5 +80,10 @@ namespace Generator_pytan
 
             Application.Exit();
         }
+
+        private void Student_dane_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

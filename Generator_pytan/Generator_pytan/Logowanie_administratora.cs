@@ -44,6 +44,11 @@ namespace Generator_pytan
         {
             Application.Exit();//Bezwarunkowe zamknięcie aplikacji
         }
+
+        private void Logowanie_administratora_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
   

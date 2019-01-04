@@ -107,6 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(430, 217);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
@@ -120,6 +121,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie nauczyciela";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Logowanie_nauczyciela_FormClosing);
+            this.Load += new System.EventHandler(this.Logowanie_nauczyciela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

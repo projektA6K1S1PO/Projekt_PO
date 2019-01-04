@@ -312,6 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1136, 622);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_indeks);
