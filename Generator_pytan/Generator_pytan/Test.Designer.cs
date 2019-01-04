@@ -94,6 +94,7 @@
             // 
             // panel_pytan
             // 
+            this.panel_pytan.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel_pytan.Controls.Add(this.lab_numer_pytania);
             this.panel_pytan.Controls.Add(this.check_odp_5);
             this.panel_pytan.Controls.Add(this.check_odp_4);
@@ -312,7 +313,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gold;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(1136, 622);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_indeks);
