@@ -112,7 +112,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(478, 211);
+            this.ClientSize = new System.Drawing.Size(472, 166);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_powrot);
             this.Controls.Add(this.label2);
