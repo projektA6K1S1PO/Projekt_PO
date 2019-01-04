@@ -165,7 +165,7 @@ namespace Generator_pytan
                         Question.maxpkt = Question.maxpkt + Convert.ToDouble(Question.baza_pytan_array[i + 2, b+8]);
                     }
                 }
-                MessageBox.Show(Convert.ToString(Question.maxpkt));
+                //MessageBox.Show(Convert.ToString(Question.maxpkt));
                     Student_oceny.procenty = (double)(wynik / Question.maxpkt) * 100;
                 string ocena = "0";
 
