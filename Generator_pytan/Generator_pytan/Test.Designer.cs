@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test));
             this.but_start_test = new System.Windows.Forms.Button();
             this.panel_pytan = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lab_numer_pytania = new System.Windows.Forms.Label();
+            this.lab_tresc_pytania = new System.Windows.Forms.Label();
             this.check_odp_5 = new System.Windows.Forms.CheckBox();
             this.check_odp_4 = new System.Windows.Forms.CheckBox();
             this.check_odp_3 = new System.Windows.Forms.CheckBox();
             this.check_odp_2 = new System.Windows.Forms.CheckBox();
             this.check_odp_1 = new System.Windows.Forms.CheckBox();
-            this.lab_numer_pytania = new System.Windows.Forms.Label();
-            this.lab_tresc_pytania = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lab_wynik = new System.Windows.Forms.Label();
@@ -52,14 +53,13 @@
             this.label_indeks = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.but_nastepne_pyt = new System.Windows.Forms.Button();
             this.but_stop_test = new System.Windows.Forms.Button();
             this.panel_pytan.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +93,47 @@
             this.panel_pytan.TabIndex = 4;
             this.panel_pytan.Visible = false;
             this.panel_pytan.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_pytan_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lab_numer_pytania);
+            this.panel4.Controls.Add(this.lab_tresc_pytania);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(816, 108);
+            this.panel4.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Pytanie";
+            // 
+            // lab_numer_pytania
+            // 
+            this.lab_numer_pytania.AutoSize = true;
+            this.lab_numer_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lab_numer_pytania.Location = new System.Drawing.Point(677, 18);
+            this.lab_numer_pytania.Name = "lab_numer_pytania";
+            this.lab_numer_pytania.Size = new System.Drawing.Size(87, 29);
+            this.lab_numer_pytania.TabIndex = 8;
+            this.lab_numer_pytania.Text = "label4";
+            // 
+            // lab_tresc_pytania
+            // 
+            this.lab_tresc_pytania.BackColor = System.Drawing.Color.LimeGreen;
+            this.lab_tresc_pytania.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lab_tresc_pytania.Location = new System.Drawing.Point(131, 9);
+            this.lab_tresc_pytania.Name = "lab_tresc_pytania";
+            this.lab_tresc_pytania.Size = new System.Drawing.Size(498, 83);
+            this.lab_tresc_pytania.TabIndex = 1;
+            this.lab_tresc_pytania.Text = "label4";
             // 
             // check_odp_5
             // 
@@ -144,34 +185,6 @@
             this.check_odp_1.Size = new System.Drawing.Size(18, 17);
             this.check_odp_1.TabIndex = 2;
             this.check_odp_1.UseVisualStyleBackColor = true;
-            // 
-            // lab_numer_pytania
-            // 
-            this.lab_numer_pytania.AutoSize = true;
-            this.lab_numer_pytania.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lab_numer_pytania.Location = new System.Drawing.Point(677, 18);
-            this.lab_numer_pytania.Name = "lab_numer_pytania";
-            this.lab_numer_pytania.Size = new System.Drawing.Size(87, 29);
-            this.lab_numer_pytania.TabIndex = 8;
-            this.lab_numer_pytania.Text = "label4";
-            // 
-            // lab_tresc_pytania
-            // 
-            this.lab_tresc_pytania.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lab_tresc_pytania.Location = new System.Drawing.Point(131, 9);
-            this.lab_tresc_pytania.Name = "lab_tresc_pytania";
-            this.lab_tresc_pytania.Size = new System.Drawing.Size(498, 83);
-            this.lab_tresc_pytania.TabIndex = 1;
-            this.lab_tresc_pytania.Text = "label4";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Pytanie";
             // 
             // label1
             // 
@@ -314,7 +327,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel2.BackColor = System.Drawing.Color.LimeGreen;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -322,18 +335,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(339, 108);
             this.panel2.TabIndex = 18;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.lab_numer_pytania);
-            this.panel4.Controls.Add(this.lab_tresc_pytania);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(816, 108);
-            this.panel4.TabIndex = 9;
             // 
             // pictureBox2
             // 
@@ -396,12 +397,12 @@
             this.Load += new System.EventHandler(this.Test_Load);
             this.panel_pytan.ResumeLayout(false);
             this.panel_pytan.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
