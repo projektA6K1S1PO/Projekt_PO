@@ -16,19 +16,25 @@ namespace Generator_pytan
 
         public Panel_wyboru()
         {
-
-            Thread t = new Thread(new ThreadStart(Splash));
-            t.Start();
-
             InitializeComponent();
-            //Ładowanie danych
-            string str = string.Empty;
-            for (int i = 0; i < 100000; i++)
+            if (Question.splasch_enable == 0)
             {
-                str += i.ToString();
+                Thread t = new Thread(new ThreadStart(Splash));
+                t.Start();
+                //Ładowanie danych
+                string str = string.Empty;
+                for (int i = 0; i < 100000; i++)
+                {
+                    str += i.ToString();
+                }
+                //Complete
+                t.Abort();
             }
-            //Complete
-            t.Abort();
+            Question.splasch_enable = 1;
+
+
+            
+
 
         }
 
