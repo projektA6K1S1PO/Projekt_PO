@@ -54,6 +54,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -226,6 +229,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.widelki);
@@ -275,7 +281,7 @@
             this.widelki.Cursor = System.Windows.Forms.Cursors.Hand;
             this.widelki.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.widelki.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.widelki.Location = new System.Drawing.Point(60, 224);
+            this.widelki.Location = new System.Drawing.Point(60, 230);
             this.widelki.Name = "widelki";
             this.widelki.Size = new System.Drawing.Size(66, 63);
             this.widelki.TabIndex = 30;
@@ -318,6 +324,36 @@
             this.label10.TabIndex = 40;
             this.label10.Text = "Wczytaj zestaw pytań";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(66, 193);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 17);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Otwórz";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(63, 99);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 17);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "Powrót";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(66, 296);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 17);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Zapisz";
+            // 
             // Panel_nauczyciela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -352,6 +388,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Panel_nauczyciela_FormClosing);
             this.Load += new System.EventHandler(this.Panel_adminstratora_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -385,5 +422,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
     }
 }
