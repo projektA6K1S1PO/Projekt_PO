@@ -33,9 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.login_box = new System.Windows.Forms.TextBox();
             this.haslo_box = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +63,8 @@
             // 
             // login_box
             // 
+            this.login_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.login_box.ForeColor = System.Drawing.Color.White;
             this.login_box.Location = new System.Drawing.Point(212, 40);
             this.login_box.Name = "login_box";
             this.login_box.Size = new System.Drawing.Size(145, 22);
@@ -68,31 +72,50 @@
             // 
             // haslo_box
             // 
+            this.haslo_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.haslo_box.ForeColor = System.Drawing.Color.White;
             this.haslo_box.Location = new System.Drawing.Point(212, 87);
             this.haslo_box.Name = "haslo_box";
             this.haslo_box.PasswordChar = '*';
             this.haslo_box.Size = new System.Drawing.Size(145, 22);
             this.haslo_box.TabIndex = 3;
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Location = new System.Drawing.Point(303, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 31);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Zaloguj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 141);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(389, 86);
+            this.panel1.TabIndex = 7;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(179, 124);
+            this.button2.BackColor = System.Drawing.Color.Beige;
+            this.button2.BackgroundImage = global::Generator_pytan.Properties.Resources.arrow_left_thumb;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(96, 10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 31);
+            this.button2.Size = new System.Drawing.Size(69, 64);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Powrót ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Beige;
+            this.button1.BackgroundImage = global::Generator_pytan.Properties.Resources.prawo;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(247, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 64);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -107,11 +130,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(430, 217);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(389, 227);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.haslo_box);
             this.Controls.Add(this.login_box);
             this.Controls.Add(this.label2);
@@ -122,6 +144,7 @@
             this.Text = "Logowanie nauczyciela";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Logowanie_nauczyciela_FormClosing);
             this.Load += new System.EventHandler(this.Logowanie_nauczyciela_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -137,5 +160,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

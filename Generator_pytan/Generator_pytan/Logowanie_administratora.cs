@@ -49,6 +49,11 @@ namespace Generator_pytan
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
   

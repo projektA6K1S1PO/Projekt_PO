@@ -85,5 +85,10 @@ namespace Generator_pytan
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

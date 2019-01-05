@@ -168,5 +168,29 @@
   <ItemGroup>
     <None Include="Resources\48362920_2339759736063470_820148950341255168_n.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zapisz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power-thumb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prawo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-1-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-left-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Przechwytywanie.JPG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

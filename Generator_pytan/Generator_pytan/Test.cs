@@ -149,7 +149,7 @@ namespace Generator_pytan
             numer_pytania++;//Przejdz do następnego pytania
             if ((numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 2))
             {
-                but_nastepne_pyt.Text = "Zakończ test i zapisz wynik";
+                but_nastepne_pyt.Visible = true;
                 but_stop_test.Visible = false;
             }
             if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 1)//Jeżeli koniec testu
@@ -299,6 +299,11 @@ namespace Generator_pytan
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void panel_pytan_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
