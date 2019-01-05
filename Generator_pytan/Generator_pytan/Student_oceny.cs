@@ -23,7 +23,7 @@ namespace Generator_pytan
         public static int dbDo;
         // Zmienne przydatne
         public static double procenty;
-        public static string nazwa_pliku = "PW_DEFAULT";
+        public static string nazwa_pliku = "default";
         public static int ilosc_studentow;
 
 
