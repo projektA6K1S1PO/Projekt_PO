@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,9 +16,26 @@ namespace Generator_pytan
 
         public Panel_wyboru()
         {
+
+            Thread t = new Thread(new ThreadStart(Splash));
+            t.Start();
+
             InitializeComponent();
+            //Ładowanie danych
+            string str = string.Empty;
+            for (int i = 0; i < 70000; i++)
+            {
+                str += i.ToString();
+            }
+            //Complete
+            t.Abort();
 
+        }
 
+        void Splash()
+        {
+            splasch frm = new splasch();
+            Application.Run(frm);
         }
 
         private void Form1_Load(object sender, EventArgs e)

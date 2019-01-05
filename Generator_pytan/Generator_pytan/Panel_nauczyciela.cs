@@ -107,7 +107,7 @@ namespace Generator_pytan
             Student_oceny.dstDo = Convert.ToInt16(dostatecznyDo.Text);
             Student_oceny.dbDo = Convert.ToInt16(dobryDo.Text);
 
-            MessageBox.Show("Widełki ocen to:\nOcena niedostateczna poniżej " + Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo + " %");
+            MessageBox.Show("Progi procentowe ocen to:\nOcena niedostateczna poniżej " + Student_oceny.ndstDo + " %\nOcena dostateczna poniżej " + Student_oceny.dstDo + " %\nOcena dobra poniżej " + Student_oceny.dbDo + " %");
 
         }
 

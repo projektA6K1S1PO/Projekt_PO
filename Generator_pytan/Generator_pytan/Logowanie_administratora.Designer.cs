@@ -141,6 +141,7 @@
             this.Controls.Add(this.haslo_box);
             this.Controls.Add(this.login_box);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Logowanie_administratora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie Administrator";
