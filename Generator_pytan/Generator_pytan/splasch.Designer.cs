@@ -61,17 +61,17 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(37, 349);
+            this.label2.Location = new System.Drawing.Point(27, 349);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(443, 17);
+            this.label2.Size = new System.Drawing.Size(453, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Projekt zaliczeniowy Projektowanie Obiektowe A6K1S1 2019";
+            this.label2.Text = "Projekt zaliczeniowy Programowanie Obiektowe A6K1S1 2019";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(119, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(274, 221);
             this.pictureBox1.TabIndex = 1;
