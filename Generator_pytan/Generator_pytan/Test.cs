@@ -122,7 +122,7 @@ namespace Generator_pytan
             {
                 do
                 {
-                    temp = rnd.Next(1, 12)-1;
+                    temp = rnd.Next(1, Convert.ToInt16(Question.baza_pytan_array[0, 2])+2) -1;
                     check = 0;
                     for (int b = 0; b < Convert.ToInt16(Question.baza_pytan_array[0, 2]); b++)
                     {
@@ -162,7 +162,11 @@ namespace Generator_pytan
                 {
                     for (int b = 0; b < 5; b++)//5 odp w zestawie
                     {
-                        Question.maxpkt = Question.maxpkt + Convert.ToDouble(Question.baza_pytan_array[i + 2, b+8]);
+                        if(Convert.ToDouble(Question.baza_pytan_array[i + 2, b + 8]) > 0)
+                        {
+                            Question.maxpkt = Question.maxpkt + Convert.ToDouble(Question.baza_pytan_array[i + 2, b + 8]);
+                        }
+                        
                     }
                 }
                 //MessageBox.Show(Convert.ToString(Question.maxpkt));
@@ -184,6 +188,10 @@ namespace Generator_pytan
                 else if (Student_oceny.procenty >= Student_oceny.dbDo)
                 {
                     ocena = "5";
+                }
+                if(Student_oceny.procenty<= Student_oceny.ndstDo)
+                {
+                    Student_oceny.procenty = 0;
                 }
 
                 DialogResult result;
