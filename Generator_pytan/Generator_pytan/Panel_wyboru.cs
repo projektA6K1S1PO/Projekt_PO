@@ -23,7 +23,7 @@ namespace Generator_pytan
             InitializeComponent();
             //Ładowanie danych
             string str = string.Empty;
-            for (int i = 0; i < 70000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 str += i.ToString();
             }
