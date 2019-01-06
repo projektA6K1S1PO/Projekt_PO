@@ -92,7 +92,6 @@
             this.panel_pytan.Size = new System.Drawing.Size(816, 482);
             this.panel_pytan.TabIndex = 4;
             this.panel_pytan.Visible = false;
-            this.panel_pytan.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_pytan_Paint);
             // 
             // panel4
             // 
@@ -205,7 +204,6 @@
             this.label3.Size = new System.Drawing.Size(203, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Rozwiązujesz zestaw: ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lab_wynik
             // 
@@ -227,7 +225,6 @@
             this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Imie:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -239,7 +236,6 @@
             this.label5.Size = new System.Drawing.Size(80, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Nazwisko:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -251,7 +247,6 @@
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Grupa:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -263,7 +258,6 @@
             this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Nr Indeksu";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label_imie
             // 
@@ -345,7 +339,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // but_nastepne_pyt
             // 

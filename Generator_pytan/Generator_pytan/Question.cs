@@ -28,6 +28,7 @@ namespace Generator_pytan
         public static double maxpkt;  //Max ilość punktów do zdobycia pobrana z pliku z testem
         public static int[] losowanie;//Tablica na potrzeby losowania pytań bez powtórzeń
         public static int splasch_enable;
+        public static int ilosc_pytan;
         
 
 

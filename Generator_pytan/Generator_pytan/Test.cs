@@ -77,7 +77,7 @@ namespace Generator_pytan
         //Funkcja generująca obiekty klasy Question
         private void generuj_obiekty_pytan()
         {
-            for (int i = 0; i < Convert.ToInt16(Question.baza_pytan_array[0, 2]); i++)
+            for (int i = 0; i < Question.ilosc_pytan; i++)
             {
                 Question.listaPytan.Add(new Question());
 
@@ -86,19 +86,19 @@ namespace Generator_pytan
         //Funkcja napełniająca obiekty Question danymi z tablicy bazy pytań
         private void napelnij_danymi_obiekty()
         {
-            for (int numer_pytania = 0; numer_pytania < Convert.ToInt16(Question.baza_pytan_array[0, 2]); numer_pytania++)
+            for (int numer_pytania = 0; numer_pytania < Question.ilosc_pytan; numer_pytania++)
             {
-                Question.listaPytan[Question.losowanie[numer_pytania]].tresc = Question.baza_pytan_array[numer_pytania + 2, 1];
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_1 = Question.baza_pytan_array[numer_pytania + 2, 3];
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_2 = Question.baza_pytan_array[numer_pytania + 2, 4];
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_3 = Question.baza_pytan_array[numer_pytania + 2, 5];
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_4 = Question.baza_pytan_array[numer_pytania + 2, 6];
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_5 = Question.baza_pytan_array[numer_pytania + 2, 7];
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_1_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 8]);
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_2_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 9]);
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_3_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 10]);
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_4_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 11]);
-                Question.listaPytan[Question.losowanie[numer_pytania]].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[numer_pytania + 2, 12]);
+                Question.listaPytan[numer_pytania].tresc = Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 1];
+                Question.listaPytan[numer_pytania].odp_1 = Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 3];
+                Question.listaPytan[numer_pytania].odp_2 = Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 4];
+                Question.listaPytan[numer_pytania].odp_3 = Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 5];
+                Question.listaPytan[numer_pytania].odp_4 = Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 6];
+                Question.listaPytan[numer_pytania].odp_5 = Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 7];
+                Question.listaPytan[numer_pytania].odp_1_poprawna = Convert.ToInt16(Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 8]);
+                Question.listaPytan[numer_pytania].odp_2_poprawna = Convert.ToInt16(Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 9]);
+                Question.listaPytan[numer_pytania].odp_3_poprawna = Convert.ToInt16(Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 10]);
+                Question.listaPytan[numer_pytania].odp_4_poprawna = Convert.ToInt16(Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 11]);
+                Question.listaPytan[numer_pytania].odp_5_poprawna = Convert.ToInt16(Question.baza_pytan_array[Question.losowanie[numer_pytania] + 2, 12]);
                 //Obsługa kolejnych elementów 
             }
 
@@ -118,13 +118,13 @@ namespace Generator_pytan
             Random rnd = new Random();
             int temp = 0;
 
-            for (int i = 0; i < Convert.ToInt16(Question.baza_pytan_array[0, 2]); i++)
+            for (int i = 0; i < Question.ilosc_pytan; i++)
             {
                 do
                 {
                     temp = rnd.Next(1, Convert.ToInt16(Question.baza_pytan_array[0, 2])+2) -1;
                     check = 0;
-                    for (int b = 0; b < Convert.ToInt16(Question.baza_pytan_array[0, 2]); b++)
+                    for (int b = 0; b < Question.ilosc_pytan; b++)
                     {
                         if (Question.losowanie[b] == temp)
                         {
@@ -136,10 +136,23 @@ namespace Generator_pytan
                 Question.losowanie[i] = temp;
             }
 
-            for (int i = 0; i < Convert.ToInt16(Question.baza_pytan_array[0, 2]); i++)
+            for (int i = 0; i < Question.ilosc_pytan; i++)
             {
                 Question.losowanie[i] = Question.losowanie[i]-1;
             }
+
+            //MessageBox.Show(Convert.ToString(Question.losowanie[0]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[1]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[2]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[3]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[4]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[5]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[6]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[7]));
+            //MessageBox.Show(Convert.ToString(Question.losowanie[8]));
+
+            //MessageBox.Show(Convert.ToString(Question.losowanie[9]));
+
         }
         private void but_nastepne_pyt_Click(object sender, EventArgs e)
         {
@@ -147,24 +160,24 @@ namespace Generator_pytan
             sprawdz_odp();//Sprawdz poprawność odp dodaj punkty do wyniku
             zeruj_odp();//Zeruj zaznaczenia checkboxów
             numer_pytania++;//Przejdz do następnego pytania
-            if ((numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 2))
+            if ((numer_pytania > (Question.ilosc_pytan) - 2))
             {
                 but_nastepne_pyt.Visible = true;
                 but_stop_test.Visible = false;
             }
-            if (numer_pytania > (Convert.ToInt16(Question.baza_pytan_array[0, 2])) - 1)//Jeżeli koniec testu
+            if (numer_pytania > (Question.ilosc_pytan) - 1)//Jeżeli koniec testu
             {
                 but_nastepne_pyt.Visible = false;
                 panel_pytan.Visible = false;
 
                 //Obliczenie max ilości punktów z zestawu
-                for (int i = 0; i < (Convert.ToInt16(Question.baza_pytan_array[0, 2])); i++)
+                for (int i = 0; i < (Question.ilosc_pytan); i++)
                 {
                     for (int b = 0; b < 5; b++)//5 odp w zestawie
                     {
-                        if(Convert.ToDouble(Question.baza_pytan_array[i + 2, b + 8]) > 0)
+                        if(Convert.ToDouble(Question.baza_pytan_array[Question.losowanie[i] + 2, b + 8]) > 0)
                         {
-                            Question.maxpkt = Question.maxpkt + Convert.ToDouble(Question.baza_pytan_array[i + 2, b + 8]);
+                            Question.maxpkt = Question.maxpkt + Convert.ToDouble(Question.baza_pytan_array[Question.losowanie[i] + 2, b + 8]);
                         }
                         
                     }
@@ -280,38 +293,6 @@ namespace Generator_pytan
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void panel_pytan_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

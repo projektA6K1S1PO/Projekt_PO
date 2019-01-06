@@ -58,6 +58,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox_ilosc_pytan = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -370,12 +372,33 @@
             this.label10.TabIndex = 40;
             this.label10.Text = "Wczytaj zestaw pytań";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 312);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(129, 17);
+            this.label19.TabIndex = 41;
+            this.label19.Text = "Ilość pytań w teście";
+            // 
+            // textBox_ilosc_pytan
+            // 
+            this.textBox_ilosc_pytan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox_ilosc_pytan.ForeColor = System.Drawing.Color.White;
+            this.textBox_ilosc_pytan.Location = new System.Drawing.Point(183, 309);
+            this.textBox_ilosc_pytan.Name = "textBox_ilosc_pytan";
+            this.textBox_ilosc_pytan.Size = new System.Drawing.Size(55, 22);
+            this.textBox_ilosc_pytan.TabIndex = 42;
+            this.textBox_ilosc_pytan.Text = "10";
+            // 
             // Panel_nauczyciela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(574, 363);
+            this.Controls.Add(this.textBox_ilosc_pytan);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -444,5 +467,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox_ilosc_pytan;
     }
 }

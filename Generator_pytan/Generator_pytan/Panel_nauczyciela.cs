@@ -39,26 +39,34 @@ namespace Generator_pytan
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            if (!button4ClickFlag)
+            if(Convert.ToInt16(textBox_ilosc_pytan.Text)> Convert.ToInt16(Question.baza_pytan_array[0, 2]))
             {
-                string fileName = AppDomain.CurrentDomain.BaseDirectory + "wyniki.txt";
-                if (!File.Exists(fileName))
-                {
-                    using (FileStream fs = File.Create(fileName))
-                    {
-                    }
-                    folderZapisu = fileName;
-                }
-                else
-                {
-                    folderZapisu = fileName;
-                }
-
+                MessageBox.Show("Ilość wybranych pytań przekracza ilość pytań z bazy", "UWAGA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            this.Hide();//Powróc do panelu głównego
-            Panel_wyboru Panel_wyboru = new Panel_wyboru();
-            Panel_wyboru.Show();//Otwórz panel wyboru
+            else
+            {
+                Question.ilosc_pytan = Convert.ToInt16(textBox_ilosc_pytan.Text);
+                if (!button4ClickFlag)
+                {
+                    string fileName = AppDomain.CurrentDomain.BaseDirectory + "wyniki.txt";
+                    if (!File.Exists(fileName))
+                    {
+                        using (FileStream fs = File.Create(fileName))
+                        {
+                        }
+                        folderZapisu = fileName;
+                    }
+                    else
+                    {
+                        folderZapisu = fileName;
+                    }
+
+                }
+                this.Hide();//Powróc do panelu głównego
+                Panel_wyboru Panel_wyboru = new Panel_wyboru();
+                Panel_wyboru.Show();//Otwórz panel wyboru
+            }
+
         }
 
 
